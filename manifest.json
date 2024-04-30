@@ -1,0 +1,1073 @@
+{
+  "name": "Rixo 128",
+  "author": "128zen",
+  "version": "1.0.0",
+  "api_version": 3,
+  "default_locale": "en-us",
+  "settings": [
+    {
+      "label": "colors_group_label",
+      "variables": [
+        {
+          "identifier": "body_primary",
+          "type": "color",
+          "description": "Choose body primary color",
+          "label": "Body Primary Color",
+          "value": "#686B71"
+        },
+        {
+          "identifier": "body_secondary",
+          "type": "color",
+          "description": "Choose body secondary color",
+          "label": "Body Secondary Color",
+          "value": "#FFF"
+        },
+        {
+          "identifier": "background_primary_color",
+          "type": "color",
+          "description": "Choose background color for body. It is used on the inner pages",
+          "label": "Background Primary Color",
+          "value": "#FFF"
+        },
+        {
+          "identifier": "background_secondary_color",
+          "type": "color",
+          "description": "Choose background color",
+          "label": "Background Secondary Color",
+          "value": "#FFFAE7"
+        },
+        {
+          "identifier": "background_tertiary_color",
+          "type": "color",
+          "description": "Choose background color for sidebar and secondary button on hover",
+          "label": "Background Tertiary Color",
+          "value": "#F0F9F5"
+        },
+        {
+          "identifier": "headings_primary",
+          "type": "color",
+          "description": "Choose heading primary color",
+          "label": "Heading Primary Color",
+          "value": "#111"
+        },
+        {
+          "identifier": "button_background_color",
+          "type": "color",
+          "description": "Choose button background color",
+          "label": "Button Background Color",
+          "value": "#007E60"
+        },
+        {
+          "identifier": "hover_link_color",
+          "type": "color",
+          "description": "Choose the primary color for the hover state of the links",
+          "label": "Hover Link Primary Color",
+          "value": "#007E60"
+        }
+      ]
+    },
+    {
+      "label": "fonts_group_label",
+      "variables": [
+        {
+          "identifier": "heading_font",
+          "type": "list",
+          "description": "heading_font_description",
+          "label": "heading_font_label",
+          "value": "Poppins, Arial, sans-serif",
+          "options": [
+            {
+              "label": "Poppins",
+              "value": "Poppins, Arial, sans-serif"
+            },
+            {
+              "label": "Karla",
+              "value": "Karla, Arial, sans-serif"
+            },
+            {
+              "label": "System",
+              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Arial",
+              "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Arial Black",
+              "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Baskerville",
+              "value": "Baskerville, 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Century Gothic",
+              "value": "'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Copperplate Light",
+              "value": "'Copperplate Light', 'Copperplate Gothic Light', serif"
+            },
+            {
+              "label": "Courier New",
+              "value": "'Courier New', Courier, monospace"
+            },
+            {
+              "label": "Futura",
+              "value": "Futura, 'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Garamond",
+              "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Geneva",
+              "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif"
+            },
+            {
+              "label": "Georgia",
+              "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif"
+            },
+            {
+              "label": "Helvetica",
+              "value": "Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Helvetica Neue",
+              "value": "'Helvetica Neue', Arial, Helvetica, sans-serif"
+            },
+            {
+              "label": "Impact",
+              "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+            },
+            {
+              "label": "Lucida Grande",
+              "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "Trebuchet MS",
+              "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            }
+          ]
+        },
+        {
+          "identifier": "text_font",
+          "type": "list",
+          "description": "text_font_description",
+          "label": "text_font_label",
+          "value": "Karla, Arial, sans-serif",
+          "options": [
+            {
+              "label": "Karla",
+              "value": "Karla, Arial, sans-serif"
+            },
+            {
+              "label": "Poppins",
+              "value": "Poppins, Arial, sans-serif"
+            },
+            {
+              "label": "System",
+              "value": "-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Arial",
+              "value": "Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Arial Black",
+              "value": "'Arial Black', Arial, 'Helvetica Neue', Helvetica, sans-serif"
+            },
+            {
+              "label": "Baskerville",
+              "value": "Baskerville, 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Century Gothic",
+              "value": "'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Copperplate Light",
+              "value": "'Copperplate Light', 'Copperplate Gothic Light', serif"
+            },
+            {
+              "label": "Courier New",
+              "value": "'Courier New', Courier, monospace"
+            },
+            {
+              "label": "Futura",
+              "value": "Futura, 'Century Gothic', sans-serif"
+            },
+            {
+              "label": "Garamond",
+              "value": "Garamond, 'Hoefler Text', 'Times New Roman', Times, serif"
+            },
+            {
+              "label": "Geneva",
+              "value": "Geneva, 'Lucida Sans', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif"
+            },
+            {
+              "label": "Georgia",
+              "value": "Georgia, Palatino, 'Palatino Linotype', Times, 'Times New Roman', serif"
+            },
+            {
+              "label": "Helvetica",
+              "value": "Helvetica, Arial, sans-serif"
+            },
+            {
+              "label": "Helvetica Neue",
+              "value": "'Helvetica Neue', Arial, Helvetica, sans-serif"
+            },
+            {
+              "label": "Impact",
+              "value": "Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif"
+            },
+            {
+              "label": "Lucida Grande",
+              "value": "'Lucida Grande', 'Lucida Sans', 'Lucida Sans Unicode', sans-serif"
+            },
+            {
+              "label": "Trebuchet MS",
+              "value": "'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "brand_group_label",
+      "variables": [
+        {
+          "identifier": "logo",
+          "type": "file",
+          "description": "logo_description",
+          "label": "logo_label"
+        },
+        {
+          "identifier": "show_brand_name",
+          "type": "checkbox",
+          "description": "show_brand_name_description",
+          "label": "show_brand_name_label",
+          "value": false
+        },
+        {
+          "identifier": "favicon",
+          "type": "file",
+          "description": "favicon_description",
+          "label": "favicon_label"
+        }
+      ]
+    },
+    {
+      "label": "search_group_label",
+      "variables": [
+        {
+          "identifier": "instant_search",
+          "type": "checkbox",
+          "description": "instant_search_description",
+          "label": "instant_search_label",
+          "value": true
+        },
+        {
+          "identifier": "scoped_kb_search",
+          "type": "checkbox",
+          "description": "scoped_knowledge_base_search_description",
+          "label": "scoped_knowledge_base_search_label",
+          "value": true
+        },
+        {
+          "identifier": "scoped_community_search",
+          "type": "checkbox",
+          "description": "scoped_community_search_description",
+          "label": "scoped_community_search_label",
+          "value": true
+        },
+        {
+          "identifier": "show_popular_keywords",
+          "type": "checkbox",
+          "description": "Show popular keywords",
+          "label": "Toggle Popular Keywords",
+          "value": true
+        },
+        {
+          "identifier": "popular_keywords_description",
+          "type": "text",
+          "description": "Enter popular keywords description",
+          "label": "Popular Keywords Description",
+          "value": "Common searches:"
+        },
+        {
+          "identifier": "popular_keywords",
+          "type": "text",
+          "description": "Enter popular keywords (separated by commas)",
+          "label": "Popular Keywords",
+          "value": ""
+        }
+      ]
+    },
+    {
+      "label": "Header Custom Links",
+      "variables": [
+        {
+          "identifier": "header_button1",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Link Text 1",
+          "value": "Home"
+        },
+        {
+          "identifier": "header_button1_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Link URL 1",
+          "value": "#"
+        },
+        {
+          "identifier": "show_header_link1",
+          "type": "checkbox",
+          "description": "Show link 1",
+          "label": "Toggle Link 1",
+          "value": true
+        },
+        {
+          "identifier": "header_button2",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Link Text 2",
+          "value": "Documentation"
+        },
+        {
+          "identifier": "header_button2_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Link URL 2",
+          "value": "#"
+        },
+        {
+          "identifier": "show_header_link2",
+          "type": "checkbox",
+          "description": "Show link 2",
+          "label": "Toggle Link 2",
+          "value": true
+        },
+        {
+          "identifier": "header_button3",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Link Text 3",
+          "value": "Pages"
+        },
+        {
+          "identifier": "header_button3_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Link URL 3",
+          "value": "#"
+        },
+        {
+          "identifier": "show_header_link3",
+          "type": "checkbox",
+          "description": "Show link 3",
+          "label": "Toggle Link 3",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "Homepage Banner Section",
+      "variables": [
+        {
+          "identifier": "hero_heading",
+          "type": "text",
+          "description": "Enter the heading in the top section",
+          "label": "Hero Heading",
+          "value": "Hello, how can we help you?"
+        },
+        {
+          "identifier": "hero_text",
+          "type": "text",
+          "description": "Enter the subtitle in the top section",
+          "label": "Hero Subtitle",
+          "value": "We have answers for all your questions. Let’s verify all the information to find out where your shipment is."
+        },
+        {
+          "identifier": "show_hero_text",
+          "type": "checkbox",
+          "description": "Show hero subtitle",
+          "label": "Toggle Subtitle Component",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "Homepage Introduction Section",
+      "variables": [
+        {
+          "identifier": "second_section_item1_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 1 Image"
+        },
+        {
+          "identifier": "second_section_item1_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Item 1 Heading",
+          "value": "Video tutorials"
+        },
+        {
+          "identifier": "second_section_item1_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 1 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "second_section_item1_subtitle",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Item 1 Subtitle",
+          "value": "Discover everything you need to know to start your journey"
+        },
+        {
+          "identifier": "second_section_item2_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 2 Image"
+        },
+        {
+          "identifier": "second_section_item2_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Item 2 Heading",
+          "value": "Campaigns"
+        },
+        {
+          "identifier": "second_section_item2_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 2 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "second_section_item2_subtitle",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Item 2 Subtitle",
+          "value": "Discover everything you need to know to start your journey"
+        },
+        {
+          "identifier": "second_section_item3_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 3 Image"
+        },
+        {
+          "identifier": "second_section_item3_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Item 3 Heading",
+          "value": "Account settings"
+        },
+        {
+          "identifier": "second_section_item3_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 3 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "second_section_item3_subtitle",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Item 3 Subtitle",
+          "value": "Discover everything you need to know to start your journey"
+        },
+        {
+          "identifier": "second_section_item4_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 4 Image"
+        },
+        {
+          "identifier": "second_section_item4_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Item 4 Heading",
+          "value": "Features"
+        },
+        {
+          "identifier": "second_section_item4_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 4 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "second_section_item4_subtitle",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Item 4 Subtitle",
+          "value": "Discover everything you need to know to start your journey"
+        }
+      ]
+    },
+    {
+      "label": "Homepage Explore Topics Section",
+      "variables": [
+        {
+          "identifier": "show_explore_topics",
+          "type": "checkbox",
+          "description": "Show section",
+          "label": "Toggle Section",
+          "value": true
+        },
+        {
+          "identifier": "explore_topics_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Section Heading",
+          "value": "Explore topics"
+        },
+        {
+          "identifier": "explore_topics_button",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Section Button Text",
+          "value": "View All"
+        },
+        {
+          "identifier": "explore_topics_button_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Section Button Link",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "Homepage Find Solution Section",
+      "variables": [
+        {
+          "identifier": "find_solution_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Section Heading",
+          "value": "Find Solution"
+        },
+        {
+          "identifier": "find_solution_subtitle",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Section Subtitle",
+          "value": "Easily create Documentation, Knowledge-base, FAQ, Forum and more"
+        },
+        {
+          "identifier": "find_solution_item1_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 1 Image"
+        },
+        {
+          "identifier": "find_solution_item1_heading",
+          "type": "text",
+          "description": "Enter heading",
+          "label": "Item 1 Heading",
+          "value": "FAQ"
+        },
+        {
+          "identifier": "find_solution_item1_text",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Item 1 Text",
+          "value": "Professionally cultivate one-to-one find customer service with robust ideas."
+        },
+        {
+          "identifier": "find_solution_item1_link_text",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Item 1 Link Text",
+          "value": "Learn More"
+        },
+        {
+          "identifier": "find_solution_item1_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 1 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "find_solution_item2_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 2 Image"
+        },
+        {
+          "identifier": "find_solution_item2_heading",
+          "type": "text",
+          "description": "Enter heading",
+          "label": "Item 2 Heading",
+          "value": "Guides"
+        },
+        {
+          "identifier": "find_solution_item2_text",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Item 2 Text",
+          "value": "Professionally cultivate one-to-one find customer service with robust ideas."
+        },
+        {
+          "identifier": "find_solution_item2_link_text",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Item 2 Link Text",
+          "value": "Learn More"
+        },
+        {
+          "identifier": "find_solution_item2_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 2 Link",
+          "value": "#"
+        },
+        {
+          "identifier": "find_solution_item3_img",
+          "type": "file",
+          "description": "Insert image",
+          "label": "Item 3 Image"
+        },
+        {
+          "identifier": "find_solution_item3_heading",
+          "type": "text",
+          "description": "Enter heading",
+          "label": "Item 3 Heading",
+          "value": "Community"
+        },
+        {
+          "identifier": "find_solution_item3_text",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Item 3 Text",
+          "value": "Professionally cultivate one-to-one find customer service with robust ideas."
+        },
+        {
+          "identifier": "find_solution_item3_link_text",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Item 3 Link Text",
+          "value": "Learn More"
+        },
+        {
+          "identifier": "find_solution_item3_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Item 3 Link",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "Homepage Promoted Articles Section",
+      "variables": [
+        {
+          "identifier": "fourth_section_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Section Heading",
+          "value": "Promoted articles"
+        },       
+        {
+          "identifier": "fourth_section_button",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Section Button Text",
+          "value": "View all"
+        },
+        {
+          "identifier": "fourth_section_button_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Section Button Link",
+          "value": "#"
+        }
+      ]
+    },
+    {
+      "label": "Category Page",
+      "variables": [
+        {
+          "identifier": "category_heading",
+          "type": "text",
+          "description": "Enter hero heading",
+          "label": "Hero Heading",
+          "value": "Hello, how can we help you?"
+        },
+        {
+          "identifier": "show_category_subtitle",
+          "type": "checkbox",
+          "description": "Show hero subtitle",
+          "label": "Toggle Subtitle Component",
+          "value": true
+        },
+        {
+          "identifier": "category_subtitle",
+          "type": "text",
+          "description": "Enter hero subtitle",
+          "label": "Hero Subtitle",
+          "value": "We have answers for all your questions. Let’s verify all the information to find out where your shipment is."
+        }
+      ]
+    },
+    {
+      "label": "article_page_group_label",
+      "variables": [
+        {
+          "identifier": "show_articles_in_section",
+          "type": "checkbox",
+          "description": "articles_in_section_description",
+          "label": "articles_in_section_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_author",
+          "type": "checkbox",
+          "description": "article_author_description",
+          "label": "article_author_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_comments",
+          "type": "checkbox",
+          "description": "article_comments_description",
+          "label": "article_comments_label",
+          "value": true
+        },
+        {
+          "identifier": "show_follow_article",
+          "type": "checkbox",
+          "description": "follow_article_description",
+          "label": "follow_article_label",
+          "value": true
+        },
+        {
+          "identifier": "show_recently_viewed_articles",
+          "type": "checkbox",
+          "description": "recently_viewed_articles_description",
+          "label": "recently_viewed_articles_label",
+          "value": true
+        },
+        {
+          "identifier": "show_related_articles",
+          "type": "checkbox",
+          "description": "related_articles_description",
+          "label": "related_articles_label",
+          "value": true
+        },
+        {
+          "identifier": "show_article_sharing",
+          "type": "checkbox",
+          "description": "article_sharing_description",
+          "label": "article_sharing_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "section_page_group_label",
+      "variables": [
+        {
+          "identifier": "show_follow_section",
+          "type": "checkbox",
+          "description": "follow_section_description",
+          "label": "follow_section_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "community_post_group_label",
+      "variables": [
+        {
+          "identifier": "show_follow_post",
+          "type": "checkbox",
+          "description": "follow_post_description",
+          "label": "follow_post_label",
+          "value": true
+        },
+        {
+          "identifier": "show_post_sharing",
+          "type": "checkbox",
+          "description": "post_sharing_description",
+          "label": "post_sharing_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "community_topic_group_label",
+      "variables": [
+        {
+          "identifier": "show_follow_topic",
+          "type": "checkbox",
+          "description": "follow_topic_description",
+          "label": "follow_topic_label",
+          "value": true
+        }
+      ]
+    },
+    {
+      "label": "request_list_group_label",
+      "variables": [
+        {
+          "identifier": "request_list_beta",
+          "type": "checkbox",
+          "description": "request_list_beta_description",
+          "label": "request_list_beta_label",
+          "value": false
+        }
+      ]
+    },
+    {
+      "label": "Footer",
+      "variables": [
+        {
+          "identifier": "footer_background_color",
+          "type": "color",
+          "description": "Choose background color for Footer",
+          "label": "Background Tertiary Color",
+          "value": "#002E23"
+        },
+        {
+          "identifier": "footer_heading",
+          "type": "text",
+          "description": "Enter heading",
+          "label": "Footer Heading",
+          "value": "Can't find what you're looking for?"
+        },
+        {
+          "identifier": "footer_text",
+          "type": "text",
+          "description": "Enter subtitle",
+          "label": "Footer Subtitle",
+          "value": "Our customer care team is here for you!"
+        },
+        {
+          "identifier": "footer_link_text",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Footer Link Text",
+          "value": "Submit A Request"
+        },
+        {
+          "identifier": "footer_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Footer Link",
+          "value": "#"
+        },
+        {
+          "identifier": "footer_description",
+          "type": "text",
+          "description": "Enter description",
+          "label": "Footer Description",
+          "value": "Forgot your password? Learn how to reset your password from the sign in page or your account settings."
+        },
+        {
+          "identifier": "footer_list_item1",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Footer List Item 1",
+          "value": "Home"
+        },
+        {
+          "identifier": "footer_list_item1_url",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Footer List Item 1 URL",
+          "value": "#"
+        },
+        {
+          "identifier": "footer_list_item2",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Footer List Item 2",
+          "value": "What's new"
+        },
+        {
+          "identifier": "footer_list_item2_url",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Footer List Item 2 URL",
+          "value": "#"
+        },
+        {
+          "identifier": "footer_list_item3",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Footer List Item 3",
+          "value": "Documentation"
+        },
+        {
+          "identifier": "footer_list_item3_url",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Footer List Item 3 URL",
+          "value": "#"
+        },
+        {
+          "identifier": "show_footer_list_item4",
+          "type": "checkbox",
+          "description": "Show footer list item 4",
+          "label": "Toggle Footer List Item 4",
+          "value": true
+        },
+        {
+          "identifier": "footer_list_item4",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Footer List Item 4",
+          "value": "Blog"
+        },
+        {
+          "identifier": "footer_list_item4_url",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Footer List Item 4 URL",
+          "value": "#"
+        },
+        {
+          "identifier": "show_footer_list_item5",
+          "type": "checkbox",
+          "description": "Show footer list item 5",
+          "label": "Toggle Footer List Item 5",
+          "value": true
+        },
+        {
+          "identifier": "footer_list_item5",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Footer List Item 5",
+          "value": "Shop"
+        },
+        {
+          "identifier": "footer_list_item5_url",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Footer List Item 5 URL",
+          "value": "#"
+        },
+        {
+          "identifier": "show_footer_list_item6",
+          "type": "checkbox",
+          "description": "Show footer list item 6",
+          "label": "Toggle Footer List Item 6",
+          "value": true
+        },
+        {
+          "identifier": "footer_list_item6",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Footer List Item 6",
+          "value": "Contact"
+        },
+        {
+          "identifier": "footer_list_item6_url",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Footer List Item 6 URL",
+          "value": "#"
+        },
+        {
+          "identifier": "footer_right",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Footer right text",
+          "value": "128ZEN"
+        },
+        {
+          "identifier": "show_social_icon1",
+          "type": "checkbox",
+          "description": "Show Facebook icon",
+          "label": "Toggle Facebook Icon",
+          "value": true
+        },
+        {
+          "identifier": "footer_social_link1",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Facebook Link",
+          "value": "#"
+        },
+        {
+          "identifier": "show_social_icon2",
+          "type": "checkbox",
+          "description": "Show Linkedin icon",
+          "label": "Toggle Linkedin Icon",
+          "value": true
+        },
+        {
+          "identifier": "footer_social_link2",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Linkedin Link ",
+          "value": "#"
+        },
+        {
+          "identifier": "show_social_icon3",
+          "type": "checkbox",
+          "description": "Show Github icon",
+          "label": "Toggle Github Icon",
+          "value": true
+        },
+        {
+          "identifier": "footer_social_link3",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Github Link",
+          "value": "#"
+        },
+        {
+          "identifier": "show_social_icon4",
+          "type": "checkbox",
+          "description": "Show Instagram icon",
+          "label": "Toggle Instagram Icon",
+          "value": true
+        },
+        {
+          "identifier": "footer_social_link4",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Instagram Link",
+          "value": "#"
+        },
+        {
+          "identifier": "show_social_icon5",
+          "type": "checkbox",
+          "description": "Show Twitter icon",
+          "label": "Toggle Twitter Icon",
+          "value": true
+        },
+        {
+          "identifier": "footer_social_link5",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Twitter Link",
+          "value": "#"
+        },
+        {
+          "identifier": "show_social_icon6",
+          "type": "checkbox",
+          "description": "Show Youtube icon",
+          "label": "Toggle Youtube Icon",
+          "value": true
+        },
+        {
+          "identifier": "footer_social_link6",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Youtube Link",
+          "value": "#"
+        }
+      ]
+    }
+  ]
+}

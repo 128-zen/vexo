@@ -1,0 +1,252 @@
+<div class="article-page section">
+  <div class="container">
+
+    {{!-- Sidebar --}}
+    {{#if settings.show_articles_in_section}}
+    <nav class="section-page__nav nav fade-in-up">
+      <div class="search-container">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" class="search-icon" viewBox="0 0 16 16" fill="none">
+          <path d="M14.855 14.145L11.605 10.895H11.57C12.5718 9.71392 13.078 8.19119 12.9828 6.6454C12.8876 5.09961 12.1984 3.65049 11.0593 2.60119C9.92025 1.55189 8.41955 0.983676 6.87115 1.01542C5.32276 1.04717 3.84661 1.67641 2.7515 2.77152C1.65639 3.86663 1.02715 5.34278 0.995403 6.89117C0.963657 8.43957 1.53187 9.94026 2.58117 11.0793C3.63048 12.2184 5.07959 12.9076 6.62538 13.0028C8.17118 13.098 9.6939 12.5918 10.875 11.59C10.875 11.59 10.875 11.615 10.875 11.625L14.125 14.875C14.1715 14.9219 14.2268 14.9591 14.2877 14.9845C14.3487 15.0099 14.414 15.0229 14.48 15.0229C14.546 15.0229 14.6114 15.0099 14.6723 14.9845C14.7332 14.9591 14.7885 14.9219 14.835 14.875C14.8863 14.8297 14.9277 14.7742 14.9566 14.7122C14.9856 14.6502 15.0015 14.5828 15.0034 14.5144C15.0053 14.4459 14.9931 14.3778 14.9675 14.3143C14.942 14.2508 14.9037 14.1932 14.855 14.145ZM7.00003 12C6.01112 12 5.04442 11.7068 4.22218 11.1574C3.39993 10.608 2.75907 9.8271 2.38063 8.91346C2.00219 7.99983 1.90318 6.9945 2.0961 6.0246C2.28903 5.05469 2.76523 4.16378 3.46449 3.46451C4.16376 2.76525 5.05467 2.28905 6.02458 2.09612C6.99448 1.90319 7.99981 2.00221 8.91344 2.38065C9.82708 2.75909 10.608 3.39995 11.1574 4.2222C11.7068 5.04444 12 6.01114 12 7.00005C12 7.65666 11.8707 8.30684 11.6194 8.91346C11.3682 9.52009 10.9999 10.0713 10.5356 10.5356C10.0713 10.9999 9.52007 11.3682 8.91344 11.6194C8.30682 11.8707 7.65664 12 7.00003 12Z" fill="#686666"/>
+        </svg>
+        {{search scoped=settings.scoped_kb_search submit=false}}
+      </div>
+      <div class="nav__articles">
+        <h6><a href="{{section.url}}">{{section.name}}</a></h6>
+        <ul>
+          {{#each section.articles}}
+            <li>
+              <a href="{{url}}" 
+                  class="{{#is id ../article.id}}current-article{{/is}}"
+                  {{#is id ../article.id}}aria-current="page"{{/is}}>
+                    {{title}}
+              </a>
+            </li>
+          {{/each}}
+        </ul>
+        {{#if section.more_articles}}
+          <a href="{{section.url}}">{{t 'see_more'}}</a>
+        {{/if}}
+      </div>
+    </nav>
+    {{/if}}
+
+    {{!-- Main Content --}}
+    <div class="article-container" id="article-container">
+      <article id="main-content" class="article">
+        <header class="article-header">
+          <h1 title="{{article.title}}" class="article-title fade-in-up">
+            {{article.title}}
+            {{#if article.internal}}
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
+                <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
+                <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
+              </svg>
+            {{/if}}
+          </h1>
+          <div class="article-author fade-in-up">
+            {{#if settings.show_article_author}}
+              <div class="avatar article-avatar">
+                {{#if article.author.agent}}
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="icon-agent" aria-label="{{t 'team_member' name=article.author.name}}">
+                    <path fill="currentColor" d="M6 0C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm2.3 7H3.7c-.3 0-.4-.3-.3-.5C3.9 7.6 4.9 7 6 7s2.1.6 2.6 1.5c.1.2 0 .5-.3.5z"/>
+                  </svg>
+                {{/if}}
+                <img src="{{article.author.avatar_url}}" alt="" class="user-avatar"/>
+              </div>
+            {{/if}}
+            <div class="article-meta">
+              {{#if settings.show_article_author}}
+                {{#link 'user_profile' id=article.author.id}}
+                  {{article.author.name}}
+                {{/link}}
+              {{/if}}
+
+              <div class="meta-group">
+                {{#is article.created_at article.edited_at}}
+                  <p class="meta-data">{{date article.created_at timeago=true}}</p>
+                  <a href="#article-comments" class="article-comment-count"><p>{{t 'comments_count' count=article.comment_count}}</p></a>
+                {{else}}
+                  <p class="meta-data">{{date article.edited_at timeago=true}}</p>
+                  <a href="#article-comments" class="article-comment-count"><p>{{t 'comments_count' count=article.comment_count}}</p></a>
+                {{/is}}
+              </div>
+            </div>
+          </div>
+
+          {{#if settings.show_follow_article}}
+            <div class="article-subscribe fade-in-up">{{subscribe}}</div>
+          {{/if}}
+        </header>
+
+        <section class="article-info">
+          <div class="article-content">
+            <div class="article-body fade-in-up">{{article.body}}</div>
+
+            {{#if (compare article.content_tags.length ">" 0)}}
+              <section class="content-tags fade-in-up">
+                <p>{{t 'content_tags_label'}}</p>
+                <ul class="content-tag-list">
+                  {{#each article.content_tags}}
+                    <li class="content-tag-item" data-content-tag-id="{{id}}">
+                      {{#link "search_result" content_tag_id=id}}
+                        {{name}}
+                      {{/link}}
+                    </li>
+                  {{/each}}
+                </ul>
+              </section>
+            {{/if}}
+
+            {{#if attachments}}
+              <div class="article-attachments">
+                <ul class="attachments fade-in-up">
+                  {{#each attachments}}
+                    <li class="attachment-item">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="attachment-icon">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" d="M9.5 4v7.7c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5V3C6.5 1.6 7.6.5 9 .5s2.5 1.1 2.5 2.5v9c0 1.9-1.6 3.5-3.5 3.5S4.5 13.9 4.5 12V4"/>
+                      </svg>
+                      <a href="{{url}}" target="_blank">{{name}}</a>
+                      <div class="attachment-meta meta-group">
+                        <span class="attachment-meta-item meta-data">{{size}}</span>
+                        <a href="{{url}}" target="_blank" class="attachment-meta-item meta-data">{{t 'download'}}</a>
+                      </div>
+                    </li>
+                  {{/each}}
+                </ul>
+              </div>
+            {{/if}}
+          </div>
+        </section>
+
+        <footer>
+          <div class="article-footer">
+            {{#if settings.show_article_sharing}}
+              <div class="article-share fade-in-up">{{share}}</div>
+            {{/if}}
+          </div>
+          
+          <div class="article-votes">
+            {{#with article}}
+              <h3 class="article-votes-question fade-in-up" id="article-votes-label">{{t 'was_this_article_helpful'}}</h3>
+              <div class="article-votes-controls fade-in-up" role="group" aria-labelledby="article-votes-label">
+                {{vote 'up' class='article-vote article-vote-up'}}
+                {{vote 'down' class='article-vote article-vote-down'}}
+              </div>
+              <p class="article-votes-count p-small fade-in-up">
+                {{vote 'label' class='article-vote-label'}}
+              </p>
+            {{/with}}
+            <p class="fade-in-up p-small">{{request_callout}}</p>
+          </div>
+        </footer>
+
+        <div class="article-relatives fade-in-up">
+          {{#if settings.show_recently_viewed_articles}}
+            {{recent_articles}}
+          {{/if}}
+          {{#if settings.show_related_articles}}
+            {{related_articles}}
+          {{/if}}
+        </div>
+        {{#if settings.show_article_comments}}
+          <div class="article-comments" id="article-comments">
+            <section class="comments">
+              
+              <header class="comment-overview">
+                <h2 class="comment-heading fade-in-up">{{t 'comments_count' count=article.comment_count}}</h2>
+              </header>
+
+              <ul id="comments" class="comment-list">
+                {{#each comments}}
+                  <li id="{{anchor}}" class="comment fade-in-up">
+                    <div class="comment-wrapper">
+                      <div class="comment-info">
+                        <div class="comment-author">
+                          <div class="avatar comment-avatar">
+                            {{#if author.agent}}
+                              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="icon-agent" aria-label="{{t 'team_member' name=author.name}}">
+                                <path fill="currentColor" d="M6 0C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm2.3 7H3.7c-.3 0-.4-.3-.3-.5C3.9 7.6 4.9 7 6 7s2.1.6 2.6 1.5c.1.2 0 .5-.3.5z"/>
+                              </svg>
+                            {{/if}}
+                            <img src="{{author.avatar_url}}" alt="" class="user-avatar"/>
+                          </div>
+                          <div class="comment-meta">
+                            <span title="{{author.name}}" id="{{anchor}}-author">
+                              {{#link 'user_profile' id=author.id}}
+                                <h6>{{author.name}}</h6>
+                              {{/link}}
+                            </span>
+
+                            <div class="meta-group meta-group-opposite">
+                              {{#if editor}}
+                                <span class="meta-data">{{date edited_at timeago=true}}</span>
+                                <span class="meta-data">{{t 'edited'}}</span>
+                              {{else}}
+                                <span class="meta-data">{{date created_at timeago=true}}</span>
+                              {{/if}}
+                            </div>
+
+                          </div>
+                          <div class="comment-labels">
+                            {{#with ticket}}
+                              <a href="{{url}}" target="_zendesk_lotus" class="status-label escalation-badge">
+                                {{t 'request'}}{{id}}
+                              </a>
+                            {{/with}}
+                            {{#if pending}}
+                              <span class="comment-pending status-label status-label-pending-moderation">{{t 'pending_approval'}}</span>
+                            {{/if}}
+                          </div>
+                        </div>
+
+                        <section class="comment-body" id="{{anchor}}-body">{{body}}</section>
+                      </div>
+
+                      <div class="comment-actions-container">
+                        <div class="comment-vote vote" role="group">
+                          {{#vote 'up' role='radio' class='vote-up' selected_class='vote-voted' aria-describedby=(concat anchor "-author " anchor "-body")}}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4 6.5l3.6 3.6c.2.2.5.2.7 0L12 6.5"/>
+                          </svg>
+                          {{/vote}}
+                          {{vote 'sum' class='vote-sum'}}
+                          {{#vote 'down' role='radio' class='vote-down' selected_class='vote-voted' aria-describedby=(concat anchor "-author " anchor "-body")}}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16">
+                            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" d="M4 6.5l3.6 3.6c.2.2.5.2.7 0L12 6.5"/>
+                          </svg>
+                          {{/vote}}
+                        </div>
+                        <div class="comment-actions actions">
+                          {{#actions}}
+                          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16">
+                          <path fill="none" stroke="currentColor" d="M13.17 3.07l-1.64.71c-.48-.4-1.03-.72-1.63-.94l-.22-1.79a.511.511 0 00-.4-.44C8.86.54 8.44.5 8 .5c-.44 0-.86.04-1.28.11-.22.04-.38.22-.4.44l-.21 1.79c-.6.22-1.15.54-1.63.94l-1.65-.71a.491.491 0 00-.58.13c-.55.65-.99 1.4-1.29 2.21-.08.21 0 .44.18.58l1.45 1.08a4.91 4.91 0 000 1.87l-1.45 1.08c-.18.13-.25.37-.18.58.3.81.74 1.55 1.28 2.2.14.17.38.22.58.13l1.65-.71c.48.4 1.03.72 1.63.94l.21 1.79c.03.22.19.4.4.44.43.07.85.11 1.29.11.44 0 .86-.04 1.28-.11.22-.04.38-.22.4-.44l.21-1.79c.6-.22 1.15-.54 1.63-.94l1.65.71c.2.09.44.04.58-.13.54-.65.98-1.39 1.28-2.2.08-.21 0-.44-.18-.57L13.4 8.95c.07-.32.1-.63.1-.95s-.03-.63-.09-.94l1.45-1.08c.18-.13.25-.37.18-.58-.3-.81-.74-1.55-1.28-2.2a.51.51 0 00-.59-.13z"/>
+                          <circle cx="8" cy="8" r="2.5" fill="none" stroke="currentColor"/>
+                          </svg>
+                          {{/actions}}
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                {{/each}}
+              </ul>
+
+              {{pagination}}
+
+              {{#form 'comment' class='comment-form'}}
+                <div class="comment-container fade-in-up">
+                  {{wysiwyg 'body'}}
+                  <div class="comment-form-controls">
+                    {{input type='submit' class="button button-large"}}
+                  </div>
+                </div>
+              {{/form}}
+
+              <p class="comment-callout fade-in-up">{{comment_callout}}</p>
+            </section>
+          </div>
+        {{/if}}
+      </article>
+    </div>
+  </div>
+
+</div>

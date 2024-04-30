@@ -1,0 +1,59 @@
+<section class="category-page">
+
+  {{!-- Top Banner Section --}}
+  <section id="main-content" class="hero">
+    <div class="container">
+      <h1 class="hero-text fade-in-up">{{settings.category_heading}}</h1>
+      {{#if settings.show_category_subtitle}}
+        <p class="p-large fade-in-up">{{settings.category_subtitle}}</p>
+      {{/if}}
+      <div class="hero-inner fade-in-up">
+        <h2 class="visibility-hidden">{{ t 'search' }}</h2>
+        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
+            class="search-icon" aria-hidden="true">
+          <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor" />
+          <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5" />
+        </svg>
+        {{search instant=settings.instant_search class='search search-full'}}
+      </div>
+    </div>
+    <img src="{{asset 'category_hero_bg_left.png'}}" alt="background">
+    <img src="{{asset 'category_hero_bg_right.png'}}" alt="background">
+  </section>
+
+  {{!-- Main Content --}}
+  <section class="category-page__content container section">
+    <h2 class="fade-in-up">{{category.name}}</h2>
+    {{#if category.description}}
+      <p class="fade-in-up">{{category.description}}</p>
+    {{/if}}
+    <div class="category-page__sections">
+      {{#each sections}}
+      <div class="category-page__section fade-in-up">
+        <div class="category-page__section-heading">
+          <h3>{{name}}</h3>
+          <a class="button button-secondary" href="{{url}}">{{t 'show_all_articles'}}</a>
+        </div>
+        <div class="category-page__articles">
+          {{#each articles}}
+            <div class="category-page__article">
+              <h6><a href="{{url}}">{{title}}</a></h6>
+              <div>{{body}}</div>
+              <div>
+                <a href="{{url}}"></a>
+                {{t 'see_more'}}
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                  <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </div>
+          {{/each}}
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </section>
+
+</section>
+
+
