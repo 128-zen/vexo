@@ -1,7 +1,7 @@
 {
   "name": "Vexo 128",
   "author": "128zen",
-  "version": "1.0.17",
+  "version": "1.0.18",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -558,61 +558,70 @@
       ]
     },
     {
-      "label": "Homepage Explore Topics Section",
+      "label": "Homepage FAQ Section",
       "variables": [
         {
-          "identifier": "show_explore_topics",
-          "type": "checkbox",
-          "description": "Show section",
-          "label": "Toggle Section",
-          "value": true
-        },
-        {
-          "identifier": "explore_topics_heading",
+          "identifier": "faq_heading",
           "type": "text",
           "description": "Enter section heading",
           "label": "Section Heading",
-          "value": "Explore topics"
+          "value": "Frequently asked questions"
         },
         {
-          "identifier": "explore_topics_button",
+          "identifier": "faq_item1_heading",
           "type": "text",
-          "description": "Enter text",
-          "label": "Section Button Text",
-          "value": "View All"
+          "description": "Enter question",
+          "label": "Item 1 Question",
+          "value": "Lorem ipsum dolor sit amet."
         },
         {
-          "identifier": "explore_topics_button_link",
+          "identifier": "faq_item1_text",
           "type": "text",
-          "description": "Insert link",
-          "label": "Section Button Link",
-          "value": "#"
-        }
-      ]
-    },
-    {
-      "label": "Homepage Promoted Articles Section",
-      "variables": [
-        {
-          "identifier": "fourth_section_heading",
-          "type": "text",
-          "description": "Enter section heading",
-          "label": "Section Heading",
-          "value": "Promoted articles"
-        },       
-        {
-          "identifier": "fourth_section_button",
-          "type": "text",
-          "description": "Enter text",
-          "label": "Section Button Text",
-          "value": "View all"
+          "description": "Enter answer",
+          "label": "Item 1 Answer",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique."
         },
         {
-          "identifier": "fourth_section_button_link",
+          "identifier": "faq_item2_heading",
           "type": "text",
-          "description": "Insert link",
-          "label": "Section Button Link",
-          "value": "#"
+          "description": "Enter question",
+          "label": "Item 2 Question",
+          "value": "Lorem ipsum dolor sit amet."
+        },
+        {
+          "identifier": "faq_item2_text",
+          "type": "text",
+          "description": "Enter answer",
+          "label": "Item 2 Answer",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique."
+        },
+        {
+          "identifier": "faq_item3_heading",
+          "type": "text",
+          "description": "Enter question",
+          "label": "Item 3 Question",
+          "value": "Lorem ipsum dolor sit amet."
+        },
+        {
+          "identifier": "faq_item3_text",
+          "type": "text",
+          "description": "Enter answer",
+          "label": "Item 3 Answer",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique."
+        },
+        {
+          "identifier": "faq_item4_heading",
+          "type": "text",
+          "description": "Enter question",
+          "label": "Item 4 Question",
+          "value": "Lorem ipsum dolor sit amet."
+        },
+        {
+          "identifier": "faq_item4_text",
+          "type": "text",
+          "description": "Enter answer",
+          "label": "Item 4 Answer",
+          "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique."
         }
       ]
     },

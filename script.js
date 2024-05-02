@@ -172,6 +172,21 @@
     `
   }
 
+  //switching FAQ items
+  const descriptionItems = document.querySelectorAll('.faq__item');
+  if(descriptionItems){
+    descriptionItems.forEach((item) => {
+      item.addEventListener('click', function() {
+        descriptionItems.forEach(descItem => {
+          if (descItem !== item) {
+              descItem.classList.remove('open');
+          }
+        });
+        this.classList.toggle('open')
+      })
+    })
+  }
+
   //Page animation (fade-in-up)
   function animateElements() {
     const animatedElements = document.querySelectorAll('.fade-in-up');
