@@ -1623,15 +1623,33 @@ footer a:hover {
   gap: 80px;
 }
 
+.homepage__content {
+  width: 73%;
+  text-align: center;
+}
+
 .nav__categories h6 {
   margin-bottom: 30px;
 }
 
 .nav__categories div {
   padding: 20px;
+  border-radius: 8px;
   background-color: $background_tertiary_color;
 }
 
+.nav__categories p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.nav__categories p:nth-last-of-type() {
+  margin-bottom: 0;
+}
+
+.nav__categories a:hover {
+  font-weight: 800;
+}
 
 
 
