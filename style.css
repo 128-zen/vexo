@@ -1601,7 +1601,7 @@ footer a:hover {
 
 /***** Home page *****/
 .section {
-  padding-top: 60px;
+  margin-top: 60px;
 }
 @media (max-width: 1279px) {
   
@@ -1743,7 +1743,8 @@ footer a:hover {
   padding: 30px;
   border-radius: 8px;
   align-self: flex-start;
-  border: 1px solid rgba(166, 179, 228, 0.25);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 22px 0px rgba(0, 0, 0, 0.04);
+  background-color: $background_primary_color;
 }
 
 .faq__item div {
@@ -1762,10 +1763,6 @@ footer a:hover {
 
 .faq__item:last-child {
   margin-bottom: 0;
-}
-
-.faq__item:hover {
-  border: 1px solid $button_background_color;
 }
 
 .faq__item:hover span {
