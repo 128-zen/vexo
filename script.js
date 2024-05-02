@@ -43,7 +43,8 @@
         category: category,
         sections: sections.filter(section => section.category_id === category.id)
       }));
-  
+    console.log(categoriesAndSections)
+    console.log(categories)
     if(contentContainer){
       categoriesAndSections.forEach(categoryAndSections => {
         const categoryBlock = document.createElement('div');
