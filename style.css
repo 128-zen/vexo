@@ -245,7 +245,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: 600;
+  font-weight: 800;
   font-family: $heading_font;
   margin-top: 0;
   margin-bottom: 0;
@@ -270,9 +270,8 @@ h2 {
 }
 
 h3 {
-  font-size: 38px;
-  line-height: 110%; /* 37.4px */
-  letter-spacing: -0.68px;
+  font-size: 34px;
+  letter-spacing: -1.02px;
 }
 
 h4 {
