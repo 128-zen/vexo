@@ -1,194 +1,28 @@
-{{!-- Top Banner Section --}}
-<section id="main-content" class="hero">
-  <div class="lines">
-    <div></div>
-  </div>
+<div class="homepage">
   <div class="container">
-    <div class="hero__content">
-      <h1 class="hero-text fade-in-up">{{settings.hero_heading}}</h1>
-      {{#if settings.show_hero_text}}
-        <p class="p-large fade-in-up">{{settings.hero_text}}</p>
-      {{/if}}
-      <div class="hero-inner fade-in-up">
-        <h2 class="visibility-hidden">{{ t 'search' }}</h2>
-        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12"
-          class="search-icon" aria-hidden="true">
-          <circle cx="4.5" cy="4.5" r="4" fill="none" stroke="currentColor" />
-          <path stroke="currentColor" stroke-linecap="round" d="M11 11L7.5 7.5" />
+
+    {{!-- Sidebar --}}
+    <nav class="homepage__nav nav fade-in-up">
+      <div class="search-container">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <path d="M15.355 14.145L12.105 10.895H12.07C13.0718 9.71392 13.578 8.19119 13.4828 6.6454C13.3876 5.09961 12.6984 3.65049 11.5593 2.60119C10.4202 1.55189 8.91955 0.983676 7.37115 1.01542C5.82276 1.04717 4.34661 1.67641 3.2515 2.77152C2.15639 3.86663 1.52715 5.34278 1.4954 6.89117C1.46366 8.43957 2.03187 9.94026 3.08117 11.0793C4.13048 12.2184 5.57959 12.9076 7.12538 13.0028C8.67118 13.098 10.1939 12.5918 11.375 11.59C11.375 11.59 11.375 11.615 11.375 11.625L14.625 14.875C14.6715 14.9219 14.7268 14.9591 14.7877 14.9845C14.8487 15.0099 14.914 15.0229 14.98 15.0229C15.046 15.0229 15.1114 15.0099 15.1723 14.9845C15.2332 14.9591 15.2885 14.9219 15.335 14.875C15.3863 14.8297 15.4277 14.7742 15.4566 14.7122C15.4856 14.6502 15.5015 14.5828 15.5034 14.5144C15.5053 14.4459 15.4931 14.3778 15.4675 14.3143C15.442 14.2508 15.4037 14.1932 15.355 14.145ZM7.50003 12C6.51112 12 5.54442 11.7068 4.72218 11.1574C3.89993 10.608 3.25907 9.8271 2.88063 8.91346C2.50219 7.99983 2.40318 6.9945 2.5961 6.0246C2.78903 5.05469 3.26523 4.16378 3.96449 3.46451C4.66376 2.76525 5.55467 2.28905 6.52458 2.09612C7.49448 1.90319 8.49981 2.00221 9.41344 2.38065C10.3271 2.75909 11.108 3.39995 11.6574 4.2222C12.2068 5.04444 12.5 6.01114 12.5 7.00005C12.5 7.65666 12.3707 8.30684 12.1194 8.91346C11.8682 9.52009 11.4999 10.0713 11.0356 10.5356C10.5713 10.9999 10.0201 11.3682 9.41344 11.6194C8.80682 11.8707 8.15664 12 7.50003 12Z" fill="#686666"/>
         </svg>
-        {{search instant=settings.instant_search class='search search-full'}}
+        {{search scoped=settings.scoped_kb_search submit=false}}
       </div>
-      {{#if settings.show_popular_keywords}}
-        <div class="popular-keywords fade-in-up" data-keywords="{{settings.popular_keywords}}">
-          <p>{{settings.popular_keywords_description}}</p>
-        </div>
-      {{/if}}
-    </div>
-  </div>
-  <img src="{{asset 'hero_bg.png'}}" alt="background">
-</section>
-
-{{!-- Introduction Section --}}
-<section class="introduction section">
-  <div class="container">
-    <div class="introduction__items">
-      <div class="introduction__item fade-in-up">
-        <div>
-          <img src="{{settings.second_section_item1_img}}" alt="image">
-        </div>
-        <h5><a href="{{settings.second_section_item1_link}}">{{settings.second_section_item1_heading}}</a></h5>
-        <p>{{settings.second_section_item1_subtitle}}</p>
-      </div>
-      <div class="introduction__item fade-in-up">
-        <div>
-          <img src="{{settings.second_section_item2_img}}" alt="image">
-        </div>
-        <h5><a href="{{settings.second_section_item2_link}}">{{settings.second_section_item2_heading}}</a></h5>
-        <p>{{settings.second_section_item2_subtitle}}</p>
-      </div>
-      <div class="introduction__item fade-in-up">
-        <div>
-          <img src="{{settings.second_section_item3_img}}" alt="image">
-        </div>
-        <h5><a href="{{settings.second_section_item3_link}}">{{settings.second_section_item3_heading}}</a></h5>
-        <p>{{settings.second_section_item3_subtitle}}</p>
-      </div>
-      <div class="introduction__item fade-in-up">
-        <div>
-          <img src="{{settings.second_section_item4_img}}" alt="image">
-        </div>
-        <h5><a href="{{settings.second_section_item4_link}}">{{settings.second_section_item4_heading}}</a></h5>
-        <p>{{settings.second_section_item4_subtitle}}</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-{{!-- Explore Topics Section --}}
-{{#if settings.show_explore_topics}}
-<section class="explore-topics section">
-  <div class="container">
-    <div class="explore-topics__head">
-      <h2 class="fade-in-up">{{settings.explore_topics_heading}}</h2>
-      <div class="fade-in-up">
-        <a class="button button-primary" href="{{settings.explore_topics_button_link}}">{{settings.explore_topics_button}}</a>
-      </div>
-    </div>
-    <div class="explore-topics__items">
-      {{#each categories}}
-        {{#each sections}}
-          <div class="explore-topics__item fade-in-up">
-            <div>
-              <h6><a href="{{url}}">{{name}}</a></h6>
-              <ul>
-                {{#each articles}}
-                  <li>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path d="M12.8906 5.85938C12.1368 5.85938 11.5234 5.24605 11.5234 4.49219V0H4.53125C3.3466 0 2.38281 0.963789 2.38281 2.14844V17.8516C2.38281 19.0362 3.3466 20 4.53125 20H15.4688C16.6534 20 17.6172 19.0362 17.6172 17.8516V5.85938H12.8906ZM5.58594 14.0625H8.42656C8.75016 14.0625 9.0125 14.3248 9.0125 14.6484C9.0125 14.972 8.75016 15.2344 8.42656 15.2344H5.58594C5.26234 15.2344 5 14.972 5 14.6484C5 14.3248 5.26234 14.0625 5.58594 14.0625ZM5 11.5234C5 11.1998 5.26234 10.9375 5.58594 10.9375H14.1797C14.5033 10.9375 14.7656 11.1998 14.7656 11.5234C14.7656 11.847 14.5033 12.1094 14.1797 12.1094H5.58594C5.26234 12.1094 5 11.847 5 11.5234ZM14.1797 7.8125C14.5033 7.8125 14.7656 8.07484 14.7656 8.39844C14.7656 8.72203 14.5033 8.98438 14.1797 8.98438H5.58594C5.26234 8.98438 5 8.72203 5 8.39844C5 8.07484 5.26234 7.8125 5.58594 7.8125H14.1797Z" fill="#111111"/>
-                      <path d="M12.6953 4.49222C12.6953 4.59992 12.7829 4.68753 12.8906 4.68753H17.356C17.2488 4.48964 17.1109 4.30789 16.9453 4.15113L13.1788 0.587768C13.0326 0.449487 12.8698 0.334136 12.6954 0.243042V4.49222H12.6953Z" fill="#111111"/>
-                    </svg>
-                    <a href="{{url}}">{{title}}</a>
-                  </li>
-                {{/each}}
-              </ul>
-            </div>
-            <a class="button button-secondary" href="{{url}}">{{t 'show_all_articles'}}</a>
-          </div>
-        {{/each}}
-      {{/each}}
-    </div>
-  </div>
-  <img src="{{asset 'explore-topics_img.png'}}" alt="background">
-</section>
-{{/if}}
-
-{{!-- Quick Links Section --}}
-<section class="find-solution section">
-  <div class="container">
-    <h2>{{settings.find_solution_heading}}</h2>
-    <p>{{settings.find_solution_subtitle}}</p>
-    <div class="find-solution__items">
-      <div class="find-solution__item fade-in-up">
-        <div class="find-solution__head">
-          <div>
-            <img src="{{settings.find_solution_item1_img}}" alt="item">
-          </div>
-          <h4><a href="{{settings.find_solution_item1_link}}">{{settings.find_solution_item1_heading}}</a></h4>
-        </div>
-        <p class="p-small">{{settings.find_solution_item1_text}}</p>
-        <a href="{{settings.find_solution_item1_link}}">
-          {{settings.find_solution_item1_link_text}}
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
-            <path d="M1.5 5.5H10.5M10.5 5.5L6.5625 1.5M10.5 5.5L6.5625 9.5" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-      <div class="find-solution__item fade-in-up">
-        <div class="find-solution__head">
-          <div>
-            <img src="{{settings.find_solution_item2_img}}" alt="item">
-          </div>
-          <h4><a href="{{settings.find_solution_item2_link}}">{{settings.find_solution_item2_heading}}</a></h4>
-        </div>
-        <p class="p-small">{{settings.find_solution_item2_text}}</p>
-        <a href="{{settings.find_solution_item2_link}}">
-          {{settings.find_solution_item2_link_text}}
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
-            <path d="M1.5 5.5H10.5M10.5 5.5L6.5625 1.5M10.5 5.5L6.5625 9.5" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-      <div class="find-solution__item fade-in-up">
-        <div class="find-solution__head">
-          <div>
-            <img src="{{settings.find_solution_item3_img}}" alt="item">
-          </div>
-          <h4><a href="{{settings.find_solution_item3_link}}">{{settings.find_solution_item3_heading}}</a></h4>
-        </div>
-        <p class="p-small">{{settings.find_solution_item3_text}}</p>
-        <a href="{{settings.find_solution_item3_link}}">
-          {{settings.find_solution_item3_link_text}}
-          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="11" viewBox="0 0 12 11" fill="none">
-            <path d="M1.5 5.5H10.5M10.5 5.5L6.5625 1.5M10.5 5.5L6.5625 9.5" stroke="#111111" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
-      </div>
-    </div>
-  </div>
-  <img src="{{asset 'find-solution_img.png'}}" alt="background">
-</section>
-
-{{!-- Promoted Articles --}}
-{{#if promoted_articles}}
-  <section class="promoted-articles">
-    <div class="container section">
-      <div class="promoted-articles__head">
-        <h2 class="fade-in-up">{{settings.fourth_section_heading}}</h2>
-        <div class="fade-in-up">
-          <a class="button button-primary" href="{{settings.fourth_section_button_link}}">{{settings.fourth_section_button}}</a>
-        </div>
-      </div>
-      <div class="promoted-articles__items">
-        {{#each promoted_articles}}
-          <div class="promoted-articles__item fade-in-up">
-            <div>
-              <img src="{{author.avatar_url}}">
-              <div class="meta-group">
-                {{#is created_at edited_at}}
-                  <p class="meta-data">{{date created_at timeago=true}}</p>
-                {{else}}
-                  <p class="meta-data">{{date edited_at timeago=true}}</p>
-                {{/is}}
-              </div>
-            </div>
-            <h6><a href="{{url}}">{{title}}</a></h6>
-            <div>{{body}}</div>
-          </div>
+      <div class="nav__categories">
+        <h6>{{t 'categories'}}</h6>
+        {{#each categories}}
+          <a href="{{url}}">{{name}}</a>
         {{/each}}
       </div>
-    </div>
+    </nav>
 
-  </section>
-{{/if}}
+    {{!-- Main Content --}}
+    <div class="homepage__content">
+      <h1>Hello, how can we help you? </h1>
+
+    </div>
+  </div>
+</div>
 
 
