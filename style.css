@@ -1088,23 +1088,15 @@ footer a:hover {
   color: $hover_link_color;
 }
 
-@media (max-width: 1279px) {
-  
-}
-
-
-@media (max-width: 1199px) {
-  .footer__bottom .container {
-    width: calc(100% - 30px);
-  }
-}
-
-@media (max-width: 1023px) {
-  
+.footer p {
+  color: $body_secondary;
 }
 
 @media (max-width: 767px) {
-  
+  .footer .container {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .powered-by-zendesk {
