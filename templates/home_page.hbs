@@ -11,9 +11,11 @@
       </div>
       <div class="nav__categories">
         <h6>{{t 'categories'}}</h6>
-        {{#each categories}}
-          <a href="{{url}}">{{name}}</a>
-        {{/each}}
+        <div>
+          {{#each categories}}
+            <a href="{{url}}">{{name}}</a>
+          {{/each}}
+        </div>
       </div>
     </nav>
 

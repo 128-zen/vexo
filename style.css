@@ -1623,9 +1623,16 @@ footer a:hover {
   gap: 80px;
 }
 
-.homepage__nav {
-  width: 310px;
+.nav__categories h6 {
+  margin-bottom: 30px;
 }
+
+.nav__categories div {
+  padding: 20px;
+  background-color: $background_tertiary_color;
+}
+
+
 
 
 /***** Promoted articles *****/
@@ -2151,16 +2158,13 @@ footer a:hover {
 
 .nav {
   width: 27%;
-  padding: 20px;
   position: sticky;
   top: 94px;
   align-self: start;
-  border-radius: 8px;
-  background-color: $background_secondary_color;
 }
 
 .nav .search-container {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   padding-left: 0;
 }
 
@@ -2175,6 +2179,7 @@ footer a:hover {
 .nav input[type=search]{
   padding: 14px 20px 14px 50px;
   border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 22px 0px rgba(0, 0, 0, 0.04);
 }
 
 .nav input[type=search]::placeholder {
