@@ -1657,6 +1657,9 @@ footer a:hover {
   }
 }
 @media (max-width: 767px) {
+  .homepage {
+    padding: 60px 0;
+  }
   .homepage .container {
     flex-direction: column;
   }
