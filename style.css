@@ -1655,6 +1655,9 @@ footer a:hover {
   .homepage .container {
     gap: 30px;
   }
+  .homepage__content {
+    width: 65%;
+  }
 }
 @media (max-width: 767px) {
   .homepage {
