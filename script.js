@@ -1,8 +1,22 @@
 (function () {
   'use strict';
 
+
+  //taking category ID from URL
+  function getCategoryIdFromUrl(url) {
+    const regex = /\/categories\/(\d+)-/; 
+    const matches = url.match(regex);
+  
+    if (matches && matches.length === 2) {
+      const idWithoutDash = matches[1];
+      return idWithoutDash;
+    }
+  
+    return null;
+  }
+
   //taking section ID from URL
-  function getIdFromUrl(url) {
+  function getSectionIdFromUrl(url) {
     const regex = /\/sections\/(\d+)-/; 
     const matches = url.match(regex);
   
@@ -53,14 +67,14 @@
         categoryLink.textContent = category.name;
         categoryLink.setAttribute('href', category.html_url);
         categoryElement.appendChild(categoryLink);
-        const categoryId = getIdFromUrl(window.location.href); 
+        const categoryId = getCategoryIdFromUrl(window.location.href); 
         if(category.id == categoryId){
           categoryLink.classList.add('active');
         }
         categoriesList.appendChild(categoryElement)
       })
     }
-    
+
     if(contentContainer){
       categoriesAndSections.forEach(categoryAndSections => {
         const categoryBlock = document.createElement('div');
@@ -85,7 +99,7 @@
           sectionElement.setAttribute('href', section.html_url)
           sectionsBlock.appendChild(sectionElement);
           categoryBlock.appendChild(sectionsBlock);
-          const sectionId = getIdFromUrl(window.location.href) 
+          const sectionId = getSectionIdFromUrl(window.location.href) 
           const sectionArticle = document.querySelector('.section-id');
           let sectionIdArticle = ''
           if(sectionArticle){
