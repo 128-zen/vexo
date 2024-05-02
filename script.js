@@ -24,6 +24,7 @@
   const sectionsUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/sections.json`;
   
   const contentContainer = document.querySelector('.nav__list');
+  const categoriesList = document.querySelector('.categories-list');
   
   function fetchCategories() {
     return fetch(categoriesUrl)
@@ -45,6 +46,21 @@
       }));
     console.log(categoriesAndSections)
     console.log(categories)
+    if(categoriesList) {
+      categories.forEach(category => {
+        const categoryElement = document.createElement('p');
+        const categoryLink = document.createElement('a');
+        categoryLink.textContent = category.name;
+        categoryLink.setAttribute('href', category.html_url);
+        categoryElement.appendChild(categoryLink);
+        const categoryId = getIdFromUrl(window.location.href); 
+        if(category.id == categoryId){
+          categoryLink.classList.add('active');
+        }
+        categoriesList.appendChild(categoryElement)
+      })
+    }
+    
     if(contentContainer){
       categoriesAndSections.forEach(categoryAndSections => {
         const categoryBlock = document.createElement('div');
