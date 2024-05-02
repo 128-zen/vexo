@@ -1,32 +1,16 @@
 @charset "UTF-8";
 
 @font-face {
-  font-family: 'Poppins';
-  src: url($assets-poppins-semibold-woff2) format('woff2');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Poppins';
-  src: url($assets-poppins-extrabold-woff2) format('woff2');
-  font-weight: 800;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Karla';
-  src: url($assets-karla-regular-woff2) format('woff2');
+  font-family: 'THICCCBOI';
+  src: url($assets-thicccboi-regular-woff2) format('woff2');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Karla';
-  src: url($assets-karla-extrabold-woff2) format('woff2');
+  font-family: 'THICCCBOI';
+  src: url($assets-thicccboi-extrabold-woff2) format('woff2');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
