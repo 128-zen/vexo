@@ -1696,25 +1696,6 @@ footer a:hover {
   display: inline-block;
 }
 
-.introduction__item a::after, .contact-us__item a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -5px;
-  width: 0;
-  height: 2px;
-  background-color: $headings_primary;
-  transition: width .5s ease;
-}
-
-.introduction__item a:hover::after, .contact-us__item a:hover::after {
-  width: 100%;
-}
-
-.introduction__item a:hover, .contact-us__item a:hover {
-  color: $headings_primary;
-}
-
 @media (max-width: 1023px) {
   .introduction h2 {
     margin-bottom: 40px;
