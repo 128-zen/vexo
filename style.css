@@ -1061,6 +1061,32 @@ ul {
   gap: 60px;
 }
 
+.footer__social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer__social a {
+  line-height: 1;
+}
+
+.footer__social svg {
+  width: 18px;
+  height: auto;
+}
+.footer__social path {
+  fill: $body_secondary;
+}
+
+.footer__social a:hover path {
+  fill: $hover_link_color;
+}
+
+footer a:hover {
+  color: $hover_link_color;
+}
+
 @media (max-width: 1279px) {
   
 }
