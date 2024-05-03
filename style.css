@@ -2281,7 +2281,7 @@ footer a:hover {
   transform: rotate(45deg);
 }
 
-.category-page__article > div:last-of-type:hover a, .section-page__article > div:last-of-type:hover a, .featured-posts-btn:hover a {
+.category-page__article > div:last-of-type:hover, .section-page__article > div:last-of-type:hover, .featured-posts-btn:hover {
   font-weight: 800;
 }
 
