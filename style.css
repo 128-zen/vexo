@@ -2369,6 +2369,7 @@ footer a:hover {
 }
 
 .nav__list {
+  margin-top: 30px;
   padding: 20px;
   border-radius: 8px;
   background-color: $background_tertiary_color;
@@ -2388,6 +2389,16 @@ footer a:hover {
   align-items: center;
   gap: 30px;
   cursor: pointer;
+}
+
+.nav__heading p {
+  font-size: 18px;
+  transition: all .3s ease;
+}
+
+.nav__heading.active p, .nav__heading:hover p {
+  color: $hover_link_color;
+  font-weight: 800;
 }
 
 .nav__heading svg {
