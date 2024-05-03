@@ -2323,8 +2323,7 @@ footer a:hover {
 
 /***** Section pages *****/
 .section-page {
-  padding-top: 80px;
-  padding-bottom: 360px;
+  padding: 80px 0;
 }
 
 .section-page>.container {
@@ -2384,10 +2383,7 @@ footer a:hover {
 }
 
 .nav__heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
+  display: inline-block;
   cursor: pointer;
 }
 
@@ -2490,16 +2486,8 @@ footer a:hover {
   background-color: $background_primary_color;
 }
 
-@media (max-width: 1279px) {
-  .section-page {
-    padding-bottom: 340px;
-  }
-}
 
 @media (max-width: 1023px) {
-  .section-page {
-    padding-bottom: 320px;
-  }
   .section-page__content {
     width: 65%;
     padding-left: 30px;
@@ -2519,8 +2507,7 @@ footer a:hover {
 
 @media (max-width: 767px) {
   .section-page {
-    padding-top: 60px;
-    padding-bottom: 300px;
+    padding: 80px 0;
   }
   .section-page>.container {
     flex-direction: column-reverse;
