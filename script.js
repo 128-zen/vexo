@@ -58,74 +58,69 @@
         category: category,
         sections: sections.filter(section => section.category_id === category.id)
       }));
-    console.log(categoriesAndSections)
-    console.log(categories)
-    if(categoriesList) {
-      categories.forEach(category => {
-        const categoryElement = document.createElement('p');
-        const categoryLink = document.createElement('a');
-        categoryLink.textContent = category.name;
-        categoryLink.setAttribute('href', category.html_url);
-        categoryElement.appendChild(categoryLink);
-        const categoryId = getCategoryIdFromUrl(window.location.href); 
-        if(category.id == categoryId){
-          categoryLink.classList.add('active');
-        }
-        categoriesList.appendChild(categoryElement)
-      })
-    }
 
-    if(contentContainer){
-      categoriesAndSections.forEach(categoryAndSections => {
-        const categoryBlock = document.createElement('div');
-        categoryBlock.classList.add('nav__category');
-        const categoryElement = document.createElement('div');
-        categoryElement.classList.add('nav__heading');
-        const categoryHeading = document.createElement('h6');
-        const sectionsBlock = document.createElement('div');
-        sectionsBlock.classList.add('nav__sections');
-        categoryHeading.textContent = categoryAndSections.category.name;
-        categoryElement.appendChild(categoryHeading)
-        const svgString = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" fill="none"> <g opacity="0.4"> <path d="M9.9875 0.684387L11 1.68791L6 6.6496L1 1.68791L2.0125 0.684388L6 4.63945L9.9875 0.684387Z" fill="#111111"/> <path d="M10.1283 0.542338L9.98745 0.402744L9.84666 0.542389L6 4.35775L2.15334 0.54239L2.01255 0.402745L1.87171 0.542338L0.85921 1.54586L0.715977 1.68782L0.859123 1.82987L5.85912 6.79156L6 6.93136L6.14088 6.79156L11.1409 1.82987L11.284 1.68782L11.1408 1.54586L10.1283 0.542338Z" stroke="#111111" stroke-opacity="0.75" stroke-width="0.4"/> </g> </svg>';
-        const parser = new DOMParser();
-        let svgElement = parser.parseFromString(svgString, 'image/svg+xml').querySelector('svg');
-        categoryElement.appendChild(svgElement)
-        categoryBlock.appendChild(categoryElement);
-        contentContainer.appendChild(categoryBlock);
-  
-        categoryAndSections.sections.forEach(section => {
-          const sectionElement = document.createElement('a');
-          sectionElement.textContent = section.name;
-          sectionElement.setAttribute('href', section.html_url)
-          sectionsBlock.appendChild(sectionElement);
-          categoryBlock.appendChild(sectionsBlock);
-          const sectionId = getSectionIdFromUrl(window.location.href) 
-          const sectionArticle = document.querySelector('.section-id');
-          let sectionIdArticle = ''
-          if(sectionArticle){
-            sectionIdArticle = sectionArticle.innerText
+      if(categoriesList) {
+        categories.forEach(category => {
+          const categoryElement = document.createElement('p');
+          const categoryLink = document.createElement('a');
+          categoryLink.textContent = category.name;
+          categoryLink.setAttribute('href', category.html_url);
+          categoryElement.appendChild(categoryLink);
+          const categoryId = getCategoryIdFromUrl(window.location.href); 
+          if(category.id == categoryId){
+            categoryLink.classList.add('active');
           }
-          if(section.id == sectionId || section.id == sectionIdArticle){
-            categoryElement.classList.add('active');
-            sectionsBlock.classList.add('open');
-            sectionElement.classList.add('active')
-          }
+          categoriesList.appendChild(categoryElement)
+        })
+      }
+
+      if(contentContainer){
+        categoriesAndSections.forEach(categoryAndSections => {
+          const categoryBlock = document.createElement('div');
+          categoryBlock.classList.add('nav__category');
+          const categoryElement = document.createElement('div');
+          categoryElement.classList.add('nav__heading');
+          const categoryHeading = document.createElement('p');
+          const sectionsBlock = document.createElement('div');
+          sectionsBlock.classList.add('nav__sections');
+          categoryHeading.textContent = categoryAndSections.category.name;
+          categoryElement.appendChild(categoryHeading)
+          categoryBlock.appendChild(categoryElement);
+          contentContainer.appendChild(categoryBlock);
+    
+          categoryAndSections.sections.forEach(section => {
+            const sectionElement = document.createElement('a');
+            sectionElement.textContent = section.name;
+            sectionElement.setAttribute('href', section.html_url)
+            sectionsBlock.appendChild(sectionElement);
+            categoryBlock.appendChild(sectionsBlock);
+            const sectionId = getSectionIdFromUrl(window.location.href) 
+            const sectionArticle = document.querySelector('.section-id');
+            let sectionIdArticle = ''
+            if(sectionArticle){
+              sectionIdArticle = sectionArticle.innerText
+            }
+            if(section.id == sectionId || section.id == sectionIdArticle){
+              categoryElement.classList.add('active');
+              sectionsBlock.classList.add('open');
+              sectionElement.classList.add('active')
+            }
+          });
+          contentContainer.appendChild(categoryBlock);
         });
-        contentContainer.appendChild(categoryBlock);
-      });
-      //implementing sidebar navigation toggle on the Section and Article Pages
-      const navItems = document.querySelectorAll('.nav__category');
-      navItems.forEach((item) => {
-        const heading = item.querySelector('.nav__heading');
-        const content = item.querySelector('.nav__sections');
-        if(heading && content){
-          heading.addEventListener('click', function() {
-            this.classList.toggle('active');
-            content.classList.toggle('open');
-          })
-        }
-      })
-    }
+        //implementing sidebar navigation toggle on the Section and Article Pages
+        const navItems = document.querySelectorAll('.nav__category');
+        navItems.forEach((item) => {
+          const heading = item.querySelector('.nav__heading');
+          const content = item.querySelector('.nav__sections');
+          if(heading && content){
+            heading.addEventListener('click', function() {
+              this.classList.toggle('active');
+              content.classList.toggle('open');
+            })
+          }
+        })
+      }
     })
     .catch(error => console.error('Error fetching data:', error));
 
