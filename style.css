@@ -2368,6 +2368,12 @@ footer a:hover {
   color: $body_primary;
 }
 
+.nav__list {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: $background_tertiary_color;
+}
+
 .nav__category {
   margin-bottom: 14px;
 }
