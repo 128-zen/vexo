@@ -1,7 +1,7 @@
 {
   "name": "Vexo 128",
   "author": "128zen",
-  "version": "1.0.37",
+  "version": "1.0.38",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -48,7 +48,7 @@
           "type": "color",
           "description": "Choose heading primary color",
           "label": "Heading Primary Color",
-          "value": "#111"
+          "value": "#002E23"
         },
         {
           "identifier": "button_background_color",
