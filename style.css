@@ -2545,8 +2545,7 @@ footer a:hover {
 
 /***** Article page *****/
 .article-page {
-  padding-top: 80px;
-  padding-bottom: 360px;
+  padding: 80px 0;
 }
 
 .article-page>.container {
@@ -3026,9 +3025,6 @@ footer a:hover {
 }
 
 @media (max-width: 1023px) {
-  .article-page {
-    padding-bottom: 320px;
-  }
   .article-page>.container {
     gap: 30px;
   }
@@ -3042,8 +3038,7 @@ footer a:hover {
 
 @media (max-width: 767px) {
   .article-page {
-    padding-top: 60px;
-    padding-bottom: 300px;
+    padding: 60px 0;
   }
   .article-page h1, .post-title h1 {
     font-size: 46px;
