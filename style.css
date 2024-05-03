@@ -6320,10 +6320,10 @@ html[dir=rtl] .notification-left-aligned {
 
 
 /* follow button on section page */
-reach-portal div {
+reach-portal div, reach-portal a {
   z-index: 1000;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 120%; /* 21.6px */
   letter-spacing: 0.63px;
 }
