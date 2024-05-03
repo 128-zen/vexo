@@ -2833,8 +2833,8 @@ footer a:hover {
   align-items: center;
   display: flex;
   justify-content: end;
-  padding-bottom: 40px;
-  border-bottom: 1px solid rgba(64, 73, 107, 0.12);
+  padding-top: 40px;
+  border-top: 1px solid rgba(64, 73, 107, 0.12);
 }
 .article-comment-count {
   color: lighten($text_color, 20%);
