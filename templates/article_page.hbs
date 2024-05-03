@@ -15,11 +15,13 @@
         <ul>
           {{#each section.articles}}
             <li>
-              <a href="{{url}}" 
+              <p>
+                <a href="{{url}}" 
                   class="{{#is id ../article.id}}current-article{{/is}}"
                   {{#is id ../article.id}}aria-current="page"{{/is}}>
                     {{title}}
-              </a>
+                </a>
+              </p>
             </li>
           {{/each}}
         </ul>
