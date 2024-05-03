@@ -434,7 +434,8 @@ ul {
 
 
 .article-subscribe button:hover, .community-follow button:hover, .subscriptions-subscribe button:hover, .section-subscribe button:hover, .split-button button:hover {
-  background-color: $button_background_color;
+  background-color: $background_tertiary_color;
+  border: 1px solid $background_tertiary_color;
   color: $headings_primary;
 }
 
