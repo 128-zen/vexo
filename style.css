@@ -409,13 +409,14 @@ ul {
   cursor: pointer;
   display: inline-block;
   font-size: 18px;
+  font-weight: 400;
   line-height: 1.2;
   letter-spacing: 0.63px;
   margin: 0;
   text-align: center;
   transition: all .3s ease;
   padding: 14px 34px;
-  background-color: $button_background_color;
+  background-color: $background_primary_color;
   border: 1px solid $button_background_color;
   user-select: none;
   white-space: nowrap;
@@ -433,7 +434,7 @@ ul {
 
 
 .article-subscribe button:hover, .community-follow button:hover, .subscriptions-subscribe button:hover, .section-subscribe button:hover, .split-button button:hover {
-  background-color: $background_primary_color;
+  background-color: $button_background_color;
   color: $headings_primary;
 }
 
