@@ -2888,6 +2888,9 @@ footer a:hover {
     padding-right: 20px;
   }
 }
+.article-relatives path {
+  fill: $hover_link_color;
+}
 .article-votes-controls {
   display: flex;
   justify-content: center;
@@ -2919,7 +2922,7 @@ footer a:hover {
   background-color: $button_background_color;
 }
 .article-vote path {
-  fill: $headings_primary;
+  fill: $background_primary_color;
 }
 .article-vote:hover {
   background-color: $background_primary_color;
