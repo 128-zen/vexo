@@ -2375,7 +2375,7 @@ footer a:hover {
 }
 
 .nav__category {
-  margin-bottom: 14px;
+  margin-bottom: 20px;
 }
 
 .nav__category:last-child {
@@ -2402,7 +2402,7 @@ footer a:hover {
 .nav__sections {
   display: none;
   padding: 20px;
-  margin-top: 30px;
+  margin-top: 20px;
   flex-direction: column;
   align-items: start;
   border-radius: 8px;
@@ -2422,21 +2422,16 @@ footer a:hover {
 }
 
 .nav__sections a {
+  font-size: 18px;
   display: inline;
   margin-bottom: 15px;
   color: $body_primary;
 }
 
-.nav__sections a:hover {
-  color: $hover_link_color;
+.nav__sections a.active, .nav__sections a:hover {
+  color: $headings_primary;
+  font-weight: 800;
 }
-
-.nav__sections a.active {
-  color: $hover_link_color;
-  font-weight: 600;
-}
-
-
 
 .nav__sections a:last-child {
   margin-bottom: 0;
