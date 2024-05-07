@@ -3781,34 +3781,14 @@ footer a:hover {
 .striped-list-number {
   text-align: center;
 }
-.post-list-page .hero-inner, .post-list-page .search {
-  margin: 0 auto;
-}
-.post-list-page .search {
-  max-width: none;
-  margin: 0 15px;
-}
-.post-list-page .search-icon {
-  left: 35px;
-}
-.post-list-page .posts {
-  padding-bottom: 120px;
-  background-color: $background_secondary_color;
-}
 
 @media (max-width: 1279px) {
-  .post-list-page .posts {
-    padding-bottom: 100px;
-  }
   .topic-page {
     padding-bottom: 340px;
   }
 }
 
 @media (max-width: 1023px) {
-  .post-list-page .posts {
-    padding-bottom: 80px;
-  }
   .posts-item {
     width: calc(50% - 15px);
   }
@@ -3820,9 +3800,6 @@ footer a:hover {
   .topic-page {
     padding-top: 60px;
     padding-bottom: 300px;
-  }
-  .post-list-page .posts {
-    padding-bottom: 60px;
   }
   .topic-header {
     flex-direction: column;
