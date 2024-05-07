@@ -1448,6 +1448,7 @@ footer a:hover {
 }
 
 .page-header .dropdown-toggle:hover .title, .page-header .dropdown-toggle[aria-expanded='true'] .title {
+  color: $hover_link_color;
 }
 
 .sub-nav {
@@ -1620,7 +1621,7 @@ footer a:hover {
   padding: 80px 0;
 }
 
-.homepage .container, .category-page .container, .community-page .container {
+.homepage .container, .category-page .container, .community-page > .container {
   display: flex;
   gap: 80px;
 }
@@ -1659,7 +1660,7 @@ footer a:hover {
 }
 
 @media (max-width: 1023px) {
-  .homepage .container, .category-page .container, .community-page .container {
+  .homepage .container, .category-page .container, .community-page > .container {
     gap: 30px;
   }
   .homepage__content, .community__content {
@@ -2057,7 +2058,7 @@ footer a:hover {
 }
 .recent-activity-list {
   display: flex;
-  margin-top: 60px;
+  margin-top: 40px;
   gap: 30px;
   flex-wrap: wrap;
   justify-content: center;
@@ -2065,7 +2066,7 @@ footer a:hover {
 .recent-activity-item {
   text-align: left;
   padding: 30px;
-  width: calc(33.3% - 20px);
+  width: calc(50% - 15px);
   border-radius: 8px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 22px 0px rgba(0, 0, 0, 0.04);
   background-color: $background_primary_color;
@@ -2168,16 +2169,10 @@ footer a:hover {
   margin-left: 0;
   margin-right: 3px;
 }
-@media (max-width: 1023px) {
-  .recent-activity-list {
-    margin-top: 40px;
-  }
-  .recent-activity-item {
-    width: calc(50% - 15px);
-  }
-}
+
 @media (max-width: 767px) {
   .recent-activity-list {
+    margin-top: 20px;
     gap: 20px;
   }
   .recent-activity-item {
@@ -3537,7 +3532,7 @@ footer a:hover {
   width: 100%;
 }
 .community-featured-posts {
-  background-color: $background_light_color;
+  text-align: left;
 }
 .community-featured-posts .container {
   position: relative;
@@ -3564,19 +3559,18 @@ footer a:hover {
 .featured-posts {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin-top: 40px;
   gap: 30px;
 }
 .featured-posts-item {
   border-radius: 8px;
   padding: 30px;
-  background: $background_secondary_color;
-  width: calc(33.3% - 20px);
+  background: $background_tertiary_color;
+  width: calc(50% - 15px);
 }
 .featured-posts-item a {
   display: block;
   width: fit-content;
-  color: $headings_primary;
 }
 .featured-posts-btn {
   cursor: pointer;
@@ -3596,14 +3590,10 @@ footer a:hover {
   vertical-align: baseline;
 }
 
-@media (max-width: 1023px) {
-  .featured-posts-item {
-    width: calc(50% - 15px);
-  }
-}
+
 @media (max-width: 767px) {
   .featured-posts {
-    margin-top: 35px;
+    margin-top: 20px;
     gap: 20px;
     justify-content: center;
   }
