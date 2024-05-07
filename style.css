@@ -1395,6 +1395,7 @@ footer a:hover {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  text-align: left;
 }
 @media (min-width: 768px) {
   .page-header {
@@ -1671,7 +1672,7 @@ footer a:hover {
   .homepage {
     padding: 60px 0;
   }
-  .homepage .container, .category-page .container, .community-page .container {
+  .homepage .container, .category-page .container, .community-page .container, .post-list-page > .container {
     flex-direction: column;
   }
   .homepage__content, .community__content {
@@ -3657,6 +3658,11 @@ footer a:hover {
   .topics {
     padding-bottom: 80px;
   }
+  .post-list-page .page-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 767px) {
@@ -3794,6 +3800,11 @@ footer a:hover {
   }
   .topic-page {
     padding-bottom: 320px;
+  }
+  .topic-header {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
   }
 }
 @media (max-width: 767px) {
