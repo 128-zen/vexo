@@ -10,10 +10,20 @@
           {{search scoped=settings.scoped_kb_search submit=false}}
         </div>
         <div class="nav__topics">
-          <h6>{{t 'topics'}}</h6>
-          <div class="topics-list">
-            
-          </div>
+          <h6><a href="{{topic.url}}">{{topic.name}}</a></h6>
+          <ul>
+            {{#each topic.posts}}
+              <li>
+                <p>
+                  <a href="{{url}}" 
+                    class="{{#is id ../post.id}}current-article{{/is}}"
+                    {{#is id ../post.id}}aria-current="page"{{/is}}>
+                      {{title}}
+                  </a>
+                </p>
+              </li>
+            {{/each}}
+          </ul>
         </div>
       </nav>
 
