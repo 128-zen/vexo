@@ -50,10 +50,12 @@
   const categoriesUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/categories.json`;
   const sectionsUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/sections.json`;
   const topicsUrl = `https://${firstWord}.zendesk.com/api/v2/community/topics.json`;
+  const postsUrl = `https://${firstWord}.zendesk.com/api/v2/community/posts.json`;
   
   const contentContainer = document.querySelector('.nav__list');
   const categoriesList = document.querySelector('.categories-list');
   const topicsList = document.querySelector('.topics-list');
+  const postsList = document.querySelector('.posts-list');
   
   function fetchCategories() {
     return fetch(categoriesUrl)
@@ -72,15 +74,26 @@
       .then(response => response.json())
       .then(data => data.topics);
   }
+
+  function fetchPosts() {
+    return fetch(postsUrl)
+      .then(response => response.json())
+      .then(data => data.posts);
+  }
   
-  Promise.all([fetchCategories(), fetchSections(), fetchTopics()])
-    .then(([categories, sections, topics]) => {
+  Promise.all([fetchCategories(), fetchSections(), fetchTopics(), fetchPosts()])
+    .then(([categories, sections, topics, posts]) => {
       categoriesAndSections = categories.map(category => ({
         category: category,
         sections: sections.filter(section => section.category_id === category.id)
       }));
 
-      console.log(topics)
+      topicsAndPosts = topics.map(topic => ({
+        topic: topic,
+        posts: posts.filter(post => post.topic_id === topic.id)
+      }));
+
+      console.log(topicsAndPosts)
 
       if(topicsList) {
         topics.forEach(topic => {
