@@ -4,108 +4,81 @@
     <p>{{t 'no_content'}}</p>
   {{/unless}}
 
-  {{!-- Main Content --}}
-  <div id="main-content" class="topics section">
-    <div class="container">
-      <header class="page-header community-header">
-        <h1 class="fade-in-up">{{t 'community_topics'}}</h1>
-        <span class="dropdown fade-in-up">
-          <button class="dropdown-toggle" aria-haspopup="true">
-            <p class="title">
-              {{t 'community_topics'}}
+  <div class="container">
+    {{!-- Sidebar --}}
+    <nav class="community__nav nav fade-in-up">
+      <div class="search-container">
+        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+          <path d="M15.355 14.145L12.105 10.895H12.07C13.0718 9.71392 13.578 8.19119 13.4828 6.6454C13.3876 5.09961 12.6984 3.65049 11.5593 2.60119C10.4202 1.55189 8.91955 0.983676 7.37115 1.01542C5.82276 1.04717 4.34661 1.67641 3.2515 2.77152C2.15639 3.86663 1.52715 5.34278 1.4954 6.89117C1.46366 8.43957 2.03187 9.94026 3.08117 11.0793C4.13048 12.2184 5.57959 12.9076 7.12538 13.0028C8.67118 13.098 10.1939 12.5918 11.375 11.59C11.375 11.59 11.375 11.615 11.375 11.625L14.625 14.875C14.6715 14.9219 14.7268 14.9591 14.7877 14.9845C14.8487 15.0099 14.914 15.0229 14.98 15.0229C15.046 15.0229 15.1114 15.0099 15.1723 14.9845C15.2332 14.9591 15.2885 14.9219 15.335 14.875C15.3863 14.8297 15.4277 14.7742 15.4566 14.7122C15.4856 14.6502 15.5015 14.5828 15.5034 14.5144C15.5053 14.4459 15.4931 14.3778 15.4675 14.3143C15.442 14.2508 15.4037 14.1932 15.355 14.145ZM7.50003 12C6.51112 12 5.54442 11.7068 4.72218 11.1574C3.89993 10.608 3.25907 9.8271 2.88063 8.91346C2.50219 7.99983 2.40318 6.9945 2.5961 6.0246C2.78903 5.05469 3.26523 4.16378 3.96449 3.46451C4.66376 2.76525 5.55467 2.28905 6.52458 2.09612C7.49448 1.90319 8.49981 2.00221 9.41344 2.38065C10.3271 2.75909 11.108 3.39995 11.6574 4.2222C12.2068 5.04444 12.5 6.01114 12.5 7.00005C12.5 7.65666 12.3707 8.30684 12.1194 8.91346C11.8682 9.52009 11.4999 10.0713 11.0356 10.5356C10.5713 10.9999 10.0201 11.3682 9.41344 11.6194C8.80682 11.8707 8.15664 12 7.50003 12Z" fill="#686666"/>
+        </svg>
+        {{search scoped=settings.scoped_kb_search submit=false}}
+      </div>
+      <div class="nav__topics">
+        <h6>{{t 'topics'}}</h6>
+        <div>
+          {{#each topics}}
+            <p>
+              <a href="{{url}}">{{name}}</a>
             </p>
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
-                <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-          </button>
-          <span class="dropdown-menu" role="menu">
-            {{#link 'topics' role='menuitemradio' aria-checked='true'}}
-              {{t 'show_topics'}}
-            {{/link}}
-            {{#link 'posts' role='menuitemradio'}}
-              {{t 'show_all_posts'}}
-            {{/link}}
-          </span>
-        </span>
-      </header>
-      <ul class="blocks-list topics-list">
-        {{#each topics}}
-          <li class="fade-in-up topics-item {{#if internal}}blocks-item-internal{{/if}}">
-            <h5>
-              <a href="{{url}}" class="blocks-item-title">
-                {{name}}
-                {{#if internal}}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" focusable="false" viewBox="0 0 16 16" class="icon-lock" title="{{t 'internal'}}">
-                    <rect width="12" height="9" x="2" y="7" fill="currentColor" rx="1" ry="1"/>
-                    <path fill="none" stroke="currentColor" d="M4.5 7.5V4a3.5 3.5 0 017 0v3.5"/>
-                  </svg>
-                {{/if}}
-              </a>
-            </h5>
+          {{/each}}
+        </div>
+      </div>
+    </nav>
 
-            <span class="blocks-item-description">{{excerpt description}}</span>
-            <ul class="meta-group">
-              <li class="meta-data">{{t 'post_count' count=post_count}}</li>
-              <li class="meta-data">{{t 'follower_count' count=follower_count}}</li>
-            </ul>
-          </li>
-        {{/each}}
-      </ul>
+    {{!-- Main Content --}}
+    <div class="community__content">
+
+      {{!-- Featured Posts --}}
+      {{#if featured_posts}}
+        <section class="container section community-featured-posts">
+          <h2 class="fade-in-up">{{t 'featured_posts'}}</h2>
+          <ul class="featured-posts">
+            {{#each featured_posts}}
+              <li class="featured-posts-item fade-in-up">
+                <div class="avatar post-avatar">
+                  {{#if author.agent}}
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="icon-agent" aria-label="{{t 'team_member' name=author.name}}">
+                      <path fill="currentColor" d="M6 0C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm2.3 7H3.7c-.3 0-.4-.3-.3-.5C3.9 7.6 4.9 7 6 7s2.1.6 2.6 1.5c.1.2 0 .5-.3.5z"/>
+                    </svg>
+                  {{/if}}
+                  <img src="{{author.avatar_url}}" alt="avatar" class="user-avatar"/>
+                </div>
+                <div class="post-meta">
+                  <span title="{{author.name}}">
+                    {{#link 'user_profile' id=author.id}}
+                      {{author.name}}
+                    {{/link}}
+                  </span>
+                </div>
+                <h6><a href="{{url}}">{{title}}</a></h6>
+                <div class="featured-posts-item-body">{{details}}</div>
+                <div class="featured-posts-btn">
+                  <a href="{{url}}"></a>
+                  {{t 'see_more'}}
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                      <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+        </section>
+      {{/if}}
+
+      {{!-- Recent activity --}}
+      <section class="community-activity activity section">
+        <div class="container fade-in-up">
+          {{#if help_center.community_enabled}}
+            {{recent_activity scope='community'}}
+          {{/if}}
+        </div>
+        <div class="container fade-in-up">
+          {{link 'new_post' class='button button-primary'}}
+        </div>
+      </section>
     </div>
   </div>
 
-  {{pagination}}
-
-  {{!-- Featured Posts --}}
-  {{#if featured_posts}}
-    <section class="container section community-featured-posts">
-      <h2 class="fade-in-up">{{t 'featured_posts'}}</h2>
-      <ul class="featured-posts">
-        {{#each featured_posts}}
-          <li class="featured-posts-item fade-in-up">
-            <div class="avatar post-avatar">
-              {{#if author.agent}}
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" focusable="false" viewBox="0 0 12 12" class="icon-agent" aria-label="{{t 'team_member' name=author.name}}">
-                  <path fill="currentColor" d="M6 0C2.7 0 0 2.7 0 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 2c1.1 0 2 .9 2 2s-.9 2-2 2-2-.9-2-2 .9-2 2-2zm2.3 7H3.7c-.3 0-.4-.3-.3-.5C3.9 7.6 4.9 7 6 7s2.1.6 2.6 1.5c.1.2 0 .5-.3.5z"/>
-                </svg>
-              {{/if}}
-              <img src="{{author.avatar_url}}" alt="avatar" class="user-avatar"/>
-            </div>
-            <div class="post-meta">
-              <span title="{{author.name}}">
-                {{#link 'user_profile' id=author.id}}
-                  {{author.name}}
-                {{/link}}
-              </span>
-            </div>
-            <h6><a href="{{url}}">{{title}}</a></h6>
-            <div class="featured-posts-item-body">{{details}}</div>
-            <div class="featured-posts-btn">
-              <a href="{{url}}"></a>
-              {{t 'see_more'}}
-              <span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
-                  <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-            </div>
-          </li>
-        {{/each}}
-      </ul>
-    </section>
-  {{/if}}
-
-  {{!-- Recent activity --}}
-  <section class="community-activity activity section">
-    <div class="container fade-in-up">
-      {{#if help_center.community_enabled}}
-        {{recent_activity scope='community'}}
-      {{/if}}
-    </div>
-    <div class="container fade-in-up">
-      {{link 'new_post' class='button button-primary'}}
-    </div>
-  </section>
 </section>

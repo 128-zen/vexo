@@ -1630,31 +1630,31 @@ footer a:hover {
   text-align: center;
 }
 
-.nav__categories h6 {
+.nav__categories h6, .nav__topics h6 {
   margin-bottom: 30px;
 }
 
-.nav__categories div {
+.nav__categories div, .nav__topics div {
   padding: 20px;
   border-radius: 8px;
   background-color: $background_tertiary_color;
 }
 
-.nav__categories p {
+.nav__categories p, .nav__topics p {
   font-size: 18px;
   margin-bottom: 20px;
 }
 
-.nav__categories p:last-child {
+.nav__categories p:last-child, .nav__topics p:last-child {
   margin-bottom: 0;
 }
 
-.nav__categories a.active {
+.nav__categories a.active, .nav__topics a.active {
   font-weight: 800;
   color: $hover_link_color;
 }
 
-.nav__categories a:hover {
+.nav__categories a:hover, .nav__topics a:hover {
   font-weight: 800;
 }
 
