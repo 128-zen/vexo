@@ -3934,16 +3934,7 @@ footer a:hover {
     max-width: 75%;
   }
 }
-.post-container {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 360px;
-}
-@media (min-width: 1024px) {
-  .post-container {
-    flex-direction: row;
-  }
-}
+
 .post-header {
   align-items: center;
   display: flex;
