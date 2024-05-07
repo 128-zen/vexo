@@ -11,19 +11,9 @@
         </div>
         <div class="nav__topics">
           <h6><a href="{{topic.url}}">{{topic.name}}</a></h6>
-          <ul>
-            {{#each topic.posts}}
-              <li>
-                {{!-- <p>
-                  <a href="{{url}}" 
-                    class="{{#is id ../post.id}}current-article{{/is}}"
-                    {{#is id ../post.id}}aria-current="page"{{/is}}>
-                      {{title}}
-                  </a>
-                </p> --}}
-              </li>
-            {{/each}}
-          </ul>
+          <div class="posts-list">
+
+          </div>
         </div>
       </nav>
 
