@@ -2570,6 +2570,10 @@ footer a:hover {
   background: $background_tertiary_color;
 }
 
+.nav-topic h6 {
+  margin-bottom: 30px;
+}
+
 .nav__articles li, .nav__topic p {
   margin-bottom: 15px;
 }
@@ -2582,7 +2586,7 @@ footer a:hover {
   font-size: 18px;
 }
 
-.nav__articles .current-article, .nav__articles a:hover, .nav__topic .current-article, .nav__topic a:hover {
+.nav__articles .current-article, .nav__articles a:hover, .nav__topic .active, .nav__topic a:hover {
   color: $hover_link_color;
   font-weight: 800;
 }
