@@ -1621,7 +1621,7 @@ footer a:hover {
   padding: 80px 0;
 }
 
-.homepage .container, .category-page .container, .community-page > .container {
+.homepage .container, .category-page .container, .community-page > .container, .post-list-page > .container {
   display: flex;
   gap: 80px;
 }
@@ -1660,7 +1660,7 @@ footer a:hover {
 }
 
 @media (max-width: 1023px) {
-  .homepage .container, .category-page .container, .community-page > .container {
+  .homepage .container, .category-page .container, .community-page > .container, .post-list-page > .container {
     gap: 30px;
   }
   .homepage__content, .community__content {
