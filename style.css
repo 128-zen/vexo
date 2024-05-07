@@ -3819,16 +3819,13 @@ footer a:hover {
     flex-direction: column;
     gap: 20px;
     align-items: flex-start;
+    text-align: left;
   }
 }
 @media (max-width: 767px) {
   .topic-page {
     padding-top: 60px;
     padding-bottom: 300px;
-  }
-  .topic-header {
-    flex-direction: column;
-    align-items: start;
   }
   .striped-list {
     margin-top: 35px;
