@@ -3608,7 +3608,7 @@ footer a:hover {
 }
 
 /* Community topics grid */
-.community-page {
+.community-page, .post-list-page {
   padding: 80px 0;
 }
 
@@ -3663,7 +3663,7 @@ footer a:hover {
   .topics {
     padding-bottom: 60px;
   }
-  .community-page {
+  .community-page, .post-list-page {
     padding: 60px 0;
   }
 }
@@ -3743,7 +3743,7 @@ footer a:hover {
   flex-direction: column;
   text-align: left;
   padding: 30px;
-  width: calc(33.3% - 20px);
+  width: calc(50% - 15px);
   border-radius: 8px;
   background-color: $background_primary_color;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 22px 0px rgba(0, 0, 0, 0.04);
