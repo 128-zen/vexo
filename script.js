@@ -36,7 +36,7 @@
   let categoriesAndSections = [];
   const categoriesUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/categories.json`;
   const sectionsUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/sections.json`;
-  const topicsUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/topics.json`;
+  const topicsUrl = `https://${firstWord}.zendesk.com/api/v2/community/topics.json`;
   
   const contentContainer = document.querySelector('.nav__list');
   const categoriesList = document.querySelector('.categories-list');
