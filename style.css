@@ -1470,7 +1470,7 @@ footer a:hover {
 
 @media (max-width: 767px) {
   .page-header h1, .page-header h2 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   .sub-nav {
     margin-bottom: 30px;
@@ -1676,6 +1676,9 @@ footer a:hover {
   }
   .homepage__content, .community__content {
     width: 100%;
+  }
+  .nav__categories h6, .nav__topics h6 {
+    margin-bottom: 20px;
   }
 }
 
@@ -2082,13 +2085,14 @@ footer a:hover {
   font-weight: 400;
   line-height: normal;
   padding: 5px 10px;
-  background-color: $background_secondary_color;
-  color: $headings_primary;
+  border 1px solid $button_background_color;
+  background-color: $button_background_color;
+  color: $body_secondary;
   border-radius: 50px;
 }
 
 .recent-activity-item-parent:hover {
-  background-color: $button_background_color;
+  background-color: $background_primary_color;
   color: $headings_primary;
 }
 
@@ -3640,7 +3644,7 @@ footer a:hover {
   right: -1px;
 }
 .activity .button {
-  margin-top: 50px;
+  margin-top: 40px;
 }
 
 @media (max-width: 1279px) {
