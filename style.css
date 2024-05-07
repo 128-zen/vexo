@@ -2570,19 +2570,19 @@ footer a:hover {
   background: $background_tertiary_color;
 }
 
-.nav__articles li {
+.nav__articles li, .nav__topic p {
   margin-bottom: 15px;
 }
 
-.nav__articles li:last-child {
+.nav__articles li:last-child, .nav__topic p:last-child {
   margin-bottom: 0;
 }
 
-.nav__articles a {
+.nav__articles a, .nav__topic a {
   font-size: 18px;
 }
 
-.nav__articles .current-article, .nav__articles a:hover {
+.nav__articles .current-article, .nav__articles a:hover, .nav__topic .current-article, .nav__topic a:hover {
   color: $hover_link_color;
   font-weight: 800;
 }
