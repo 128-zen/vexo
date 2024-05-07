@@ -36,6 +36,7 @@
   let categoriesAndSections = [];
   const categoriesUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/categories.json`;
   const sectionsUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/sections.json`;
+  const topicsUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/topics.json`;
   
   const contentContainer = document.querySelector('.nav__list');
   const categoriesList = document.querySelector('.categories-list');
@@ -51,13 +52,21 @@
       .then(response => response.json())
       .then(data => data.sections);
   }
+
+  function fetchTopics() {
+    return fetch(topicsUrl)
+      .then(response => response.json())
+      .then(data => data.topics);
+  }
   
-  Promise.all([fetchCategories(), fetchSections()])
-    .then(([categories, sections]) => {
+  Promise.all([fetchCategories(), fetchSections(), fetchTopics()])
+    .then(([categories, sections, topics]) => {
       categoriesAndSections = categories.map(category => ({
         category: category,
         sections: sections.filter(section => section.category_id === category.id)
       }));
+
+      console.log(topics)
 
       if(categoriesList) {
         categories.forEach(category => {
