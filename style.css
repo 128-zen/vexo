@@ -1625,7 +1625,7 @@ footer a:hover {
   gap: 80px;
 }
 
-.homepage__content {
+.homepage__content, .community__content {
   width: 73%;
   text-align: center;
 }
@@ -1662,7 +1662,7 @@ footer a:hover {
   .homepage .container, .category-page .container, .community-page .container {
     gap: 30px;
   }
-  .homepage__content {
+  .homepage__content, .community__content {
     width: 65%;
   }
 }
@@ -1673,7 +1673,7 @@ footer a:hover {
   .homepage .container, .category-page .container, .community-page .container {
     flex-direction: column;
   }
-  .homepage__content {
+  .homepage__content, .community__content {
     width: 100%;
   }
 }
@@ -3637,7 +3637,6 @@ footer a:hover {
 .activity {
   position: relative;
   overflow: hidden;
-  padding-bottom: 360px;
   background-color: $background_primary_color;
 }
 .activity .container {
@@ -3655,27 +3654,18 @@ footer a:hover {
 }
 
 @media (max-width: 1279px) {
-  .activity {
-    padding-bottom: 340px;
-  }
   .topics {
     padding-bottom: 100px;
   }
 }
 
 @media (max-width: 1023px) {
-  .activity {
-    padding-bottom: 320px;
-  }
   .topics {
     padding-bottom: 80px;
   }
 }
 
 @media (max-width: 767px) {
-  .activity {
-    padding-bottom: 300px;
-  }
   .topics {
     padding-bottom: 60px;
   }
