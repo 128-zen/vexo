@@ -69,7 +69,7 @@
   const contentContainer = document.querySelector('.nav__list');
   const categoriesList = document.querySelector('.categories-list');
   const topicsList = document.querySelector('.topics-list');
-  const postsList = document.querySelector('.posts-list');
+  const postsList = document.querySelector('.nav .posts-list');
   
   function fetchCategories() {
     return fetch(categoriesUrl)
@@ -116,7 +116,7 @@
             topicAndPosts.posts.forEach(post => {
               const postElement = document.createElement('p');
               const postLink = document.createElement('a');
-              postLink.textContent = post.name;
+              postLink.textContent = post.title;
               postLink.setAttribute('href', post.html_url);
               postElement.appendChild(postLink);
               const topicId = getPostIdFromUrl(window.location.href); 
