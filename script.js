@@ -47,6 +47,7 @@
   const firstWord = parts[0].replace('https://', '');
 
   let categoriesAndSections = [];
+  let topicsAndPosts = [];
   const categoriesUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/categories.json`;
   const sectionsUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/sections.json`;
   const topicsUrl = `https://${firstWord}.zendesk.com/api/v2/community/topics.json`;
