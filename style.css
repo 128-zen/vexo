@@ -3919,20 +3919,8 @@ footer a:hover {
 }
 
 /***** Post *****/
-/*
-* The post grid is defined this way:
-* Content | Sidebar
-* 70%     | 30%
-*/
 .post {
-  flex: 1;
-  margin-bottom: 10px;
-}
-@media (min-width: 1024px) {
-  .post {
-    flex: 1 0 75%;
-    max-width: 75%;
-  }
+  text-align: left;
 }
 
 .post-header {
@@ -3941,10 +3929,12 @@ footer a:hover {
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 30px;
+  gap: 20px;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .post-header {
     flex-direction: row;
+    gap: 0;
   }
 }
 .post-header .status-label {
@@ -3953,8 +3943,9 @@ footer a:hover {
 .post-title {
   margin-bottom: 20px;
   width: 100%;
+  padding-right: 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .post-title {
     margin-bottom: 0;
     padding-right: 50px;
