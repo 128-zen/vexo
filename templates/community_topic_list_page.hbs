@@ -31,7 +31,29 @@
       {{!-- Featured Posts --}}
       {{#if featured_posts}}
         <section class="community-featured-posts">
-          <h2 class="fade-in-up">{{t 'featured_posts'}}</h2>
+          <header class="page-header community-header">
+            <h2 class="fade-in-up">{{t 'featured_posts'}}</h2>
+            <span class="dropdown fade-in-up">
+              <button class="dropdown-toggle" aria-haspopup="true">
+                <p class="title">
+                  {{t 'community_topics'}}
+                </p>
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+                    <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+              </button>
+              <span class="dropdown-menu" role="menu">
+                {{#link 'topics' role='menuitemradio' aria-checked='true'}}
+                  {{t 'show_topics'}}
+                {{/link}}
+                {{#link 'posts' role='menuitemradio'}}
+                  {{t 'show_all_posts'}}
+                {{/link}}
+              </span>
+            </span>
+          </header>
           <ul class="featured-posts">
             {{#each featured_posts}}
               <li class="featured-posts-item fade-in-up">
