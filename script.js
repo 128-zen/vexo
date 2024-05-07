@@ -2,6 +2,19 @@
   'use strict';
 
 
+  //taking topic ID from URL
+  function getTopicIdFromUrl(url) {
+    const regex = /\/topics\/(\d+)-/; 
+    const matches = url.match(regex);
+  
+    if (matches && matches.length === 2) {
+      const idWithoutDash = matches[1];
+      return idWithoutDash;
+    }
+  
+    return null;
+  }
+
   //taking category ID from URL
   function getCategoryIdFromUrl(url) {
     const regex = /\/categories\/(\d+)-/; 
@@ -40,6 +53,7 @@
   
   const contentContainer = document.querySelector('.nav__list');
   const categoriesList = document.querySelector('.categories-list');
+  const topicsList = document.querySelector('.topics-list');
   
   function fetchCategories() {
     return fetch(categoriesUrl)
@@ -67,6 +81,21 @@
       }));
 
       console.log(topics)
+
+      if(topicsList) {
+        topics.forEach(topic => {
+          const topicElement = document.createElement('p');
+          const topicLink = document.createElement('a');
+          topicLink.textContent = topic.name;
+          topicLink.setAttribute('href', topic.html_url);
+          topicElement.appendChild(topicLink);
+          const topicId = getTopicIdFromUrl(window.location.href); 
+          if(topic.id == topicId){
+            topicLink.classList.add('active');
+          }
+          topicsList.appendChild(topicElement)
+        })
+      }
 
       if(categoriesList) {
         categories.forEach(category => {
