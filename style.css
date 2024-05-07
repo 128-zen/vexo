@@ -3559,9 +3559,6 @@ footer a:hover {
   transition: all .3s ease;
 }
 
-.post-to-community {
-  margin-top: 20px;
-}
 @media (min-width: 768px) {
   .post-to-community {
     margin: 0;
