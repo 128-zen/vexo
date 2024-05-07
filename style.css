@@ -2085,7 +2085,7 @@ footer a:hover {
   font-weight: 400;
   line-height: normal;
   padding: 5px 10px;
-  border 1px solid $button_background_color;
+  border: 1px solid $button_background_color;
   background-color: $button_background_color;
   color: $body_secondary;
   border-radius: 50px;
@@ -2283,7 +2283,7 @@ footer a:hover {
 }
 
 .category-page__article > div:last-of-type:hover, .section-page__article > div:last-of-type:hover, .featured-posts-btn:hover {
-  font-weight: 800;
+  color: $hover_link_color;
 }
 
 @media(max-width: 1023px) {
