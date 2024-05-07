@@ -2570,7 +2570,7 @@ footer a:hover {
   background: $background_tertiary_color;
 }
 
-.nav-topic h6 {
+.nav__topic h6 {
   margin-bottom: 30px;
 }
 
