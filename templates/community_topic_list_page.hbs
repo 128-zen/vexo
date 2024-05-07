@@ -30,7 +30,7 @@
 
       {{!-- Featured Posts --}}
       {{#if featured_posts}}
-        <section class="container section community-featured-posts">
+        <section class="section community-featured-posts">
           <h2 class="fade-in-up">{{t 'featured_posts'}}</h2>
           <ul class="featured-posts">
             {{#each featured_posts}}
@@ -69,7 +69,7 @@
 
       {{!-- Recent activity --}}
       <section class="community-activity activity section">
-        <div class="container fade-in-up">
+        <div class="fade-in-up">
           {{#if help_center.community_enabled}}
             {{recent_activity scope='community'}}
           {{/if}}
