@@ -41,6 +41,19 @@
     return null;
   }
 
+  //taking post ID from URL
+  function getPostIdFromUrl(url) {
+    const regex = /\/posts\/(\d+)-/; 
+    const matches = url.match(regex);
+  
+    if (matches && matches.length === 2) {
+      const idWithoutDash = matches[1];
+      return idWithoutDash;
+    }
+  
+    return null;
+  }
+
   //displaying Category List on the Section and Article Pages
   const url = window.location.href;
   const parts = url.split(".");
@@ -95,6 +108,26 @@
       }));
 
       console.log(topicsAndPosts)
+
+      if(postsList) {
+        let topicName = document.querySelector('.nav__topic h6')
+        topicsAndPosts.forEach(topicAndPosts => {
+          if(topicName.innerText == topicAndPosts.topic.name) {
+            topicAndPosts.posts.forEach(post => {
+              const postElement = document.createElement('p');
+              const postLink = document.createElement('a');
+              postLink.textContent = post.name;
+              postLink.setAttribute('href', post.html_url);
+              postElement.appendChild(postLink);
+              const topicId = getPostIdFromUrl(window.location.href); 
+              if(post.id == topicId){
+                postLink.classList.add('active');
+              }
+              postsList.appendChild(postElement)
+            })
+          }
+        })
+      }
 
       if(topicsList) {
         topics.forEach(topic => {
