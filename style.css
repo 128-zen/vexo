@@ -5247,7 +5247,7 @@ footer a:hover {
 
 .profile-section {
   width: 100%;
-  margin-bottom: 360px;
+  margin-bottom: 80px;
 }
 @media (min-width: 1024px) {
   .profile-section {
@@ -5615,16 +5615,7 @@ footer a:hover {
   margin: auto;
 }
 
-@media (max-width: 1279px) {
-  .profile-section {
-    margin-bottom: 340px;
-  }
-}
-
 @media (max-width: 1023px) {
-  .profile-section {
-    margin-bottom: 320px;
-  }
   .profile-lists {
     flex-wrap: wrap;
     margin-top: 0;
@@ -5635,7 +5626,7 @@ footer a:hover {
 }
 @media (max-width: 767px) {
   .profile-section {
-    margin-bottom: 300px;
+    margin-bottom: 60px;
   }
   .profile-info {
     flex-direction: column;
