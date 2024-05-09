@@ -107,8 +107,6 @@
         posts: posts.filter(post => post.topic_id === topic.id)
       }));
 
-      console.log(topicsAndPosts)
-
       if(postsList) {
         let topicName = document.querySelector('.nav__topic h6')
         topicsAndPosts.forEach(topicAndPosts => {
