@@ -4266,7 +4266,7 @@ footer a:hover {
 }
 
 .collapsible-nav-toggle {
-  top: 22.5px;
+  top: 50%;
   transform: translateY(-50%);
   position: absolute;
   right: 0;
@@ -4377,9 +4377,6 @@ footer a:hover {
 @media (max-width: 767px) {
   .collapsible-nav-list {
       margin-right: 30px;
-  }
-  .collapsible-nav-list li {
-    margin: 10px 0;
   }
   .collapsible-nav-list li.current {
     display: block;
