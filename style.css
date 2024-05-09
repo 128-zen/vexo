@@ -5691,7 +5691,9 @@ footer a:hover {
 }
 
 .search-results-sidebar {
+  padding: 20px;
   width: auto;
+  background-color: $background_tertiary_color;
 }
 
 .search-results-sidebar .sidenav-item {
@@ -5741,7 +5743,7 @@ footer a:hover {
 }
 .search-results-sidebar .collapsible-sidebar {
   margin-bottom: 30px;
-  width: 220px;
+  width: 100%;
 }
 .search-results-sidebar .collapsible-sidebar:last-child {
   margin-bottom: 0;
