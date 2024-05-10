@@ -1868,15 +1868,31 @@ footer a:hover {
 
 .contact-us h2 {
   max-width: 530px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px;
 }
 
 .contact-us p {
   max-width: 530px;
+  margin: 0 auto;
 }
 
 .contact-us div {
   margin: 40px auto 0;
+}
+
+.contact-us svg {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.contact-us svg:nth-of-type(2) {
+  right: 10px;
+  left: auto;
+}
+
+.contact-us svg path {
+  fill: $contact_us_image_color;
 }
 
 

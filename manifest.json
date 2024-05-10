@@ -1,7 +1,7 @@
 {
   "name": "Vexo 128",
   "author": "128zen",
-  "version": "1.0.95",
+  "version": "1.0.96",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -641,6 +641,13 @@
           "description": "Insert link",
           "label": "Section Button Link",
           "value": "#"
+        },
+        {
+          "identifier": "contact_us_image_color",
+          "type": "color",
+          "description": "Choose Image color",
+          "label": "Image Color",
+          "value": "rgba(255, 255, 255, 0.7)"
         }
       ]
     },
