@@ -1866,7 +1866,7 @@ footer a:hover {
   background-color: $background_tertiary_color;
 }
 
-.contact-us h2 {
+.contact-us h3 {
   max-width: 530px;
   margin: 0 auto 20px;
 }
