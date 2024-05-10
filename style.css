@@ -1858,6 +1858,27 @@ footer a:hover {
   }
 }
 
+/* Contact us */
+.contact-us {
+  position: relative;
+  padding: 40px;
+  text-align: center;
+  background-color: $background_tertiary_color;
+}
+
+.contact-us h2 {
+  max-width: 530px;
+  margin-bottom: 20px;
+}
+
+.contact-us p {
+  max-width: 530px;
+}
+
+.contact-us div {
+  margin: 40px auto 0;
+}
+
 
 /***** Promoted articles *****/
 .promoted-articles {

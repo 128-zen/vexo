@@ -1,7 +1,7 @@
 {
   "name": "Vexo 128",
   "author": "128zen",
-  "version": "1.0.94",
+  "version": "1.0.95",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -608,6 +608,39 @@
           "description": "Enter answer",
           "label": "Item 4 Answer",
           "value": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, similique."
+        }
+      ]
+    },
+    {
+      "label": "Homepage Contact us Section",
+      "variables": [
+        {
+          "identifier": "contact_us_heading",
+          "type": "text",
+          "description": "Enter section heading",
+          "label": "Section Heading",
+          "value": "Can't find What You're Looking For?"
+        },
+        {
+          "identifier": "contact_us_subtitle",
+          "type": "text",
+          "description": "Enter section subtitle",
+          "label": "Section Subtitle",
+          "value": "Have you any question which is not answered?"
+        },
+        {
+          "identifier": "contact_us_button",
+          "type": "text",
+          "description": "Enter text",
+          "label": "Section Button Text",
+          "value": "Contact us"
+        },
+        {
+          "identifier": "contact_us_button_link",
+          "type": "text",
+          "description": "Insert link",
+          "label": "Section Button Link",
+          "value": "#"
         }
       ]
     },
