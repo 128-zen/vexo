@@ -1874,16 +1874,21 @@ footer a:hover {
 .contact-us p {
   max-width: 530px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-us div {
   margin: 40px auto 0;
+  position: relative;
+  z-index: 2;
 }
 
 .contact-us svg {
   position: absolute;
   bottom: 10px;
   left: 10px;
+  z-index: 1;
 }
 
 .contact-us svg:nth-of-type(2) {
