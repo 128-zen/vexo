@@ -1,7 +1,7 @@
 {
   "name": "Vexo 128",
   "author": "128zen",
-  "version": "1.0.100",
+  "version": "1.0.101",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -42,6 +42,13 @@
           "description": "Choose background color for sidebar and secondary button on hover",
           "label": "Background Tertiary Color",
           "value": "#F0F9F5"
+        },
+        {
+          "identifier": "containers_background_color",
+          "type": "color",
+          "description": "Choose background color for containers",
+          "label": "Containers Background Color",
+          "value": "#fff"
         },
         {
           "identifier": "headings_primary",
