@@ -56,15 +56,20 @@
 
   //displaying Category List on the Section and Article Pages
   const url = window.location.href;
-  const parts = url.split(".");
-  const firstWord = parts[0].replace('https://', '');
+
+  function getDomainFromUrl(url) {
+    const parsedUrl = new URL(url);
+    return parsedUrl.hostname;
+  }
+
+  const domain = getDomainFromUrl(url);
 
   let categoriesAndSections = [];
   let topicsAndPosts = [];
-  const categoriesUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/categories.json`;
-  const sectionsUrl = `https://${firstWord}.zendesk.com/api/v2/help_center/sections.json`;
-  const topicsUrl = `https://${firstWord}.zendesk.com/api/v2/community/topics.json`;
-  const postsUrl = `https://${firstWord}.zendesk.com/api/v2/community/posts.json`;
+  const categoriesUrl = `https://${domain}/api/v2/help_center/categories.json`;
+  const sectionsUrl = `https://${domain}/api/v2/help_center/sections.json`;
+  const topicsUrl = `https://${domain}/api/v2/community/topics.json`;
+  const postsUrl = `https://${domain}/api/v2/community/posts.json`;
   
   const contentContainer = document.querySelector('.nav__list');
   const categoriesList = document.querySelector('.categories-list');
@@ -206,24 +211,6 @@
       }
     })
     .catch(error => console.error('Error fetching data:', error));
-
-  // Popular Keywords
-  const keywordsElement = document.querySelector('.popular-keywords');
-
-  if (keywordsElement) {
-    const keywordsValue = keywordsElement.getAttribute('data-keywords').split(',');
-
-    keywordsValue.forEach(function(keyword) {
-      const safeKeyword = encodeURIComponent(keyword.trim());
-      const safeFirstWord = encodeURIComponent(firstWord.trim()); 
-      let linkText = document.createTextNode(keyword.trim());
-      let link = document.createElement("a");
-      link.setAttribute("href", `https://${safeFirstWord}.zendesk.com/hc/en-us/search?query=${safeKeyword}`);
-      link.appendChild(linkText);
-      keywordsElement.appendChild(link);
-    });
-  }
-
 
   //changing Like and Dislike images on the Article Page
   const buttonUp = document.querySelector('.article-vote-up');
