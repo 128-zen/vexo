@@ -1633,6 +1633,12 @@ footer a:hover {
   text-align: center;
 }
 
+.homepage__nav {
+  padding: 20px;
+  border-radius: 8px;
+  background-color: $background_tertiary_color;
+}
+
 .nav__categories h6, .nav__topics h6 {
   margin-bottom: 30px;
 }
@@ -1655,10 +1661,6 @@ footer a:hover {
 .nav__categories a.active, .nav__topics a.active {
   font-weight: 800;
   color: $hover_link_color;
-}
-
-.nav__categories a:hover, .nav__topics a:hover {
-  font-weight: 800;
 }
 
 @media (max-width: 1023px) {
@@ -2243,7 +2245,7 @@ footer a:hover {
 .category-page__sections {
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 80px;
   justify-content: center;
   margin-top: 60px;
 }
@@ -2257,7 +2259,14 @@ footer a:hover {
 }
 
 .category-page__section-heading a {
-  text-transform: capitalize; 
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 500;
+  color: $headings_primary;
+  min-width: 90px;
+  padding-top: 5px;
+  text-transform: capitalize;
 }
 
 .category-page__section-heading path {
@@ -2283,7 +2292,6 @@ footer a:hover {
   padding: 30px;
   border-radius: 8px;
   width: calc(50% - 15px);
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 22px 0px rgba(0, 0, 0, 0.04);
   background-color: $background_secondary_color;
 }
 
@@ -2300,7 +2308,21 @@ footer a:hover {
   line-height: 1.4;
 }
 
-.category-page__article > div:last-of-type, .section-page__article > div:last-of-type, .featured-posts-btn {
+.category-page__article > div:last-of-type {
+  position: relative;
+  padding: 14px 13px;
+  border-radius: 50px;
+  font-size: 0;
+  width: fit-content;
+  transition: all .3s ease;
+  background-color: $headings_primary;
+}
+
+.category-page__article > div:last-of-type a {
+  border-radius: 50px;
+}
+
+.section-page__article > div:last-of-type, .featured-posts-btn {
   position: relative;
   display: flex;
   gap: 15px;
@@ -2319,7 +2341,16 @@ footer a:hover {
   height: 100%;
 }
 
-.category-page__article > div:last-of-type path, .section-page__article > div:last-of-type path, .featured-posts-btn path {
+.category-page__article > div:last-of-type svg {
+  width: 16px;
+  height: 14px;
+}
+
+.category-page__article > div:last-of-type path {
+  stroke: $containers_background_color;
+}
+
+.section-page__article > div:last-of-type path, .featured-posts-btn path {
   stroke: $headings_primary;
 }
 
@@ -2338,7 +2369,7 @@ footer a:hover {
     margin-bottom: 40px;
   }
   .category-page__sections {
-    gap: 40px;
+    gap: 60px;
     margin-top: 40px;
   }
   .category-page__articles {
@@ -2400,7 +2431,6 @@ footer a:hover {
 .nav input[type=search]{
   padding: 14px 20px 14px 50px;
   border-radius: 8px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 22px 0px rgba(0, 0, 0, 0.04);
 }
 
 .nav input[type=search]::placeholder {
@@ -2440,6 +2470,9 @@ footer a:hover {
 
 .nav__heading.active p, .nav__heading:hover p {
   color: $hover_link_color;
+}
+
+.nav__heading.active p {
   font-weight: 800;
 }
 
@@ -2483,6 +2516,9 @@ footer a:hover {
 
 .nav__sections a.active, .nav__sections a:hover {
   color: $headings_primary;
+}
+
+.nav__sections a.active {
   font-weight: 800;
 }
 
@@ -2625,6 +2661,9 @@ footer a:hover {
 
 .nav__articles .current-article, .nav__articles a:hover, .nav__topic .active, .nav__topic a:hover {
   color: $hover_link_color;
+}
+
+.nav__articles .current-article, .nav__topic .active {
   font-weight: 800;
 }
 

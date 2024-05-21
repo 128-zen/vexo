@@ -10,14 +10,11 @@
         {{search scoped=settings.scoped_kb_search submit=false}}
       </div>
       <div class="nav__categories">
-        <h6>{{t 'categories'}}</h6>
-        <div>
-          {{#each categories}}
-            <p>
-              <a href="{{url}}">{{name}}</a>
-            </p>
-          {{/each}}
-        </div>
+        {{#each categories}}
+          <p>
+            <a href="{{url}}">{{name}}</a>
+          </p>
+        {{/each}}
       </div>
     </nav>
 
@@ -25,52 +22,39 @@
     <div class="homepage__content">
       <h1>{{settings.hero_heading}}</h1>
 
-      {{!-- Introduction Section --}}
-      <section class="introduction section">
-        <div class="introduction__items">
-          <div class="introduction__item fade-in-up">
-            <div>
-              <img src="{{settings.introduction_img1}}" alt="icon">
+      {{!-- Categories Section --}}
+      <section class="categories section">
+        {{#each categories}}
+          <div class="categories__item">
+            <div class="categories__head">
+              <h2 class="fade-in-up">{{name}}</h2>
+              <div class="fade-in-up">
+                <a class="button button-secondary" href="{{url}}">{{t 'see_all_sections'}}</a>
+              </div>
             </div>
-            <h6><a href="{{settings.introduction_link1}}">{{settings.introduction_heading1}}</a></h6>
-            <p>{{settings.introduction_subtitle1}}</p>
-          </div>
-          <div class="introduction__item fade-in-up">
-            <div>
-              <img src="{{settings.introduction_img2}}" alt="icon">
+            <div class="categories__sections">
+              {{#each sections}}
+                <div class="categories__section fade-in-up">
+                  <div>
+                    <h6><a href="{{url}}">{{name}}</a></h6>
+                    <ul>
+                      {{#each articles}}
+                      <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20" fill="none">
+                          <path d="M13.3906 5.85938C12.6368 5.85938 12.0234 5.24605 12.0234 4.49219V0H5.03125C3.8466 0 2.88281 0.963789 2.88281 2.14844V17.8516C2.88281 19.0362 3.8466 20 5.03125 20H15.9688C17.1534 20 18.1172 19.0362 18.1172 17.8516V5.85938H13.3906ZM6.08594 14.0625H8.92656C9.25016 14.0625 9.5125 14.3248 9.5125 14.6484C9.5125 14.972 9.25016 15.2344 8.92656 15.2344H6.08594C5.76234 15.2344 5.5 14.972 5.5 14.6484C5.5 14.3248 5.76234 14.0625 6.08594 14.0625ZM5.5 11.5234C5.5 11.1998 5.76234 10.9375 6.08594 10.9375H14.6797C15.0033 10.9375 15.2656 11.1998 15.2656 11.5234C15.2656 11.847 15.0033 12.1094 14.6797 12.1094H6.08594C5.76234 12.1094 5.5 11.847 5.5 11.5234ZM14.6797 7.8125C15.0033 7.8125 15.2656 8.07484 15.2656 8.39844C15.2656 8.72203 15.0033 8.98438 14.6797 8.98438H6.08594C5.76234 8.98438 5.5 8.72203 5.5 8.39844C5.5 8.07484 5.76234 7.8125 6.08594 7.8125H14.6797Z" fill="#B9E97D"/>
+                          <path d="M13.1953 4.49219C13.1953 4.59989 13.2829 4.6875 13.3906 4.6875H17.856C17.7488 4.48961 17.6109 4.30785 17.4453 4.1511L13.6788 0.587738C13.5326 0.449457 13.3698 0.334105 13.1954 0.243011V4.49219H13.1953Z" fill="#B9E97D"/>
+                        </svg>
+                        <a href="{{url}}">{{title}}</a>
+                      </li>
+                      {{/each}}
+                    </ul>
+                  </div>
+                  <a class="button button-secondary" href="{{url}}">{{t 'show_all_articles'}}</a>
+                </div>
+              {{/each}}
             </div>
-            <h6><a href="tel:{{settings.introduction_link2}}">{{settings.introduction_heading2}}</a></h6>
-            <p>{{settings.introduction_subtitle2}}</p>
           </div>
-          <div class="introduction__item fade-in-up">
-            <div>
-              <img src="{{settings.introduction_img3}}" alt="icon">
-            </div>
-            <h6><a href="{{settings.introduction_link3}}">{{settings.introduction_heading3}}</a></h6>
-            <p>{{settings.introduction_subtitle3}}</p>
-          </div>
-          <div class="introduction__item fade-in-up">
-            <div>
-              <img src="{{settings.introduction_img4}}" alt="icon">
-            </div>
-            <h6><a href="{{settings.introduction_link4}}">{{settings.introduction_heading4}}</a></h6>
-            <p>{{settings.introduction_subtitle4}}</p>
-          </div>
-          <div class="introduction__item fade-in-up">
-            <div>
-              <img src="{{settings.introduction_img5}}" alt="icon">
-            </div>
-            <h6><a href="{{settings.introduction_link5}}">{{settings.introduction_heading5}}</a></h6>
-            <p>{{settings.introduction_subtitle5}}</p>
-          </div>
-          <div class="introduction__item fade-in-up">
-            <div>
-              <img src="{{settings.introduction_img6}}" alt="icon">
-            </div>
-            <h6><a href="{{settings.introduction_link6}}">{{settings.introduction_heading6}}</a></h6>
-            <p>{{settings.introduction_subtitle6}}</p>
-          </div>
-        </div>
+        {{/each}}
       </section>
 
       {{!-- FAQ Section --}}

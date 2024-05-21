@@ -25,7 +25,11 @@
         <div class="category-page__section fade-in-up">
           <div class="category-page__section-heading">
             <h3>{{name}}</h3>
-            <a class="button button-secondary" href="{{url}}">{{t 'show_all_articles'}}</a>
+            <a href="{{url}}">{{t 'show_all_articles'}} 
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M4.11132 3.10911L3.96161 2.96505L4.11127 2.82094L5.37299 1.60594L5.51163 1.47243L5.65036 1.60585L11.8886 7.60585L12.0385 7.75L11.8886 7.89415L5.65036 13.8941L5.51163 14.0276L5.37299 13.8941L4.11127 12.6791L3.96161 12.5349L4.11132 12.3909L8.93421 7.75L4.11132 3.10911Z" fill="#29335C" stroke="#29335C" stroke-width="0.4"></path>
+              </svg>
+            </a>
           </div>
           <div class="category-page__articles">
             {{#each articles}}
@@ -34,7 +38,6 @@
                 <div>{{body}}</div>
                 <div>
                   <a href="{{url}}"></a>
-                  {{t 'see_more'}}
                   <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
                     <path d="M1.5 5H10.5M10.5 5L6.5625 1M10.5 5L6.5625 9" stroke="#222B27" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
