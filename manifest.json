@@ -1,7 +1,7 @@
 {
   "name": "Vexo 128",
   "author": "128zen",
-  "version": "1.0.108",
+  "version": "1.0.109",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -379,7 +379,21 @@
           "type": "text",
           "description": "Enter the heading in the top section",
           "label": "Hero Heading",
-          "value": "Hello, how can we help you?"
+          "value": "Explore Beyond Boundaries"
+        },
+        {
+          "identifier": "hero_text",
+          "type": "text",
+          "description": "Enter the subtitle in the top section",
+          "label": "Hero Subtitle",
+          "value": "We have answers for all your questions."
+        },
+        {
+          "identifier": "show_hero_text",
+          "type": "checkbox",
+          "description": "Show hero subtitle",
+          "label": "Toggle Subtitle Component",
+          "value": true
         }
       ]
     },
@@ -666,7 +680,21 @@
           "type": "text",
           "description": "Enter hero heading",
           "label": "Hero Heading",
-          "value": "Hello, how can we help you?"
+          "value": "Explore Beyond Boundaries"
+        },
+        {
+          "identifier": "show_category_subtitle",
+          "type": "checkbox",
+          "description": "Show hero subtitle",
+          "label": "Toggle Subtitle Component",
+          "value": true
+        },
+        {
+          "identifier": "category_subtitle",
+          "type": "text",
+          "description": "Enter hero subtitle",
+          "label": "Hero Subtitle",
+          "value": "We have answers for all your questions."
         }
       ]
     },

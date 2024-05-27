@@ -304,10 +304,10 @@ p {
 
 @media (max-width: 767px) {
   h1 {
-    font-size: 50px;
+    font-size: 46px;
   }
   h2 {
-    font-size: 42px;
+    font-size: 40px;
   }
   h3 {
     font-size: 30px;
@@ -1260,73 +1260,32 @@ footer a:hover {
 /***** Hero component *****/
 .hero {
   overflow: hidden;
-  background-color: $background_primary_color;
+  background-color: $background_tertiary_color;
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
   position: relative;
 }
-.hero .container {
-  display: flex;
-  justify-content: flex-start;
-  padding-top: 120px;
-  padding-bottom: 200px;
-}
 
-.hero__content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 900px;
-  width: 100%;
-  z-index: 3;
-}
-.hero__content p {
-  font-size: 20px;
-  margin-bottom: 60px;
+.hero p {
+  margin: 18px auto 0;
   max-width: 645px;
 }
 
-.hero > img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
+@media (max-width: 767px) {
+  .hero {
+    padding: 20px;
+  }
 }
 
-@media (max-width: 1279px) {
-  .hero-text {
-    font-size: 50px;
-  }
-}
-@media (max-width: 1023px) {
-  .hero .container {
-    padding-top: 182px;
-    padding-bottom: 100px;
-  }
-}
-@media (max-width: 767px) {
-  .hero .container {
-    padding-top: 162px;
-    padding-bottom: 80px;
-  }
-  .hero__content {
-    max-width: 595px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .hero__content p {
-    margin-bottom: 40px;
-  }
-  .hero > img  {
-    width: 50%;
-    height: auto;
-  }
-}
 
 .hero-inner {
   position: relative;
-  max-width: 570px;
   width: 100%;
+  margin-top: 40px;
 }
 
-.hero .search, .error-page .search {
+.error-page .search {
   max-width: 570px;
 }
 
@@ -1338,7 +1297,16 @@ footer a:hover {
   color: $body_primary;
   border: 1px solid rgba(64, 73, 107, 0.12);
 }
-.hero .search input[type=submit], .error-page .search input[type=submit]{
+
+.hero .search input[type=search] {
+  padding: 15px 50px;
+}
+
+.hero .search input[type=submit] {
+  display: none;
+}
+
+.error-page .search input[type=submit] {
   position: absolute;
   right: 0;
   padding: 8px 28px;
