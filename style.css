@@ -304,16 +304,13 @@ p {
 
 @media (max-width: 767px) {
   h1 {
-    font-size: 46px;
+    font-size: 44px;
   }
   h2 {
-    font-size: 40px;
+    font-size: 36px;
   }
   h3 {
     font-size: 30px;
-  }
-  h4 {
-    font-size: 22px;
   }
 }
 a {
@@ -1729,8 +1726,7 @@ footer a:hover {
 }
 
 .categories__item li a:hover {
-  opacity: 1;
-  color: $headings_primary;
+  color: $hover_link_color;
 }
 
 .categories__item li svg path {
@@ -2223,7 +2219,7 @@ footer a:hover {
 
 @media (max-width: 1023px) {
   .recent-activity-item {
-    padding: 20px;
+    width: 100%;
   }
 }
 
@@ -2232,16 +2228,11 @@ footer a:hover {
     margin-top: 20px;
     gap: 20px;
   }
-  .recent-activity-item {
-    max-width: 470px;
-    width: 100%;
-    padding: 30px;
-  }
 }
 
 /***** Category pages *****/
 .category-page {
-  padding: 80px 0;
+  padding: 40px 0 80px;
 }
 
 .category-page__content {
@@ -2385,14 +2376,13 @@ footer a:hover {
     gap: 30px;
   }
   .category-page__article {
-    padding: 20px;
-    width: calc(50% - 15px);
+    width: 100%;
   }
 }
 
 @media(max-width: 767px) {
   .category-page {
-    padding: 60px 0;
+    padding-bottom: 60px;
   }
   .category-page__content {
     text-align: center;
@@ -2402,14 +2392,14 @@ footer a:hover {
     text-align: left;
   }
   .category-page__article {
-    width: 100%;
+    padding: 20px;
   }
 }
 
 
 /***** Section pages *****/
 .section-page {
-  padding: 80px 0;
+  padding: 40px 0 80px;
 }
 
 .section-page>.container {
@@ -2524,12 +2514,13 @@ footer a:hover {
   color: $body_primary;
 }
 
-.nav__sections a.active, .nav__sections a:hover {
-  color: $headings_primary;
+.nav__sections a:hover {
+  color: $hover_link_color;
 }
 
 .nav__sections a.active {
   font-weight: 800;
+  color: $headings_primary;
 }
 
 .nav__sections a:last-child {
@@ -2589,11 +2580,11 @@ footer a:hover {
     gap: 20px;
     flex-direction: column;
   }
-  .section-page__article {
-    padding: 25px 20px;
-  }
   .section-page__articles {
     padding-top: 40px;
+  }
+  .section-page__articles li {
+    width: 100%;
   }
   .nav {
     width: 35%;
@@ -2602,7 +2593,7 @@ footer a:hover {
 
 @media (max-width: 767px) {
   .section-page {
-    padding: 60px 0;
+    padding-bottom: 60px;
   }
   .section-page>.container {
     flex-direction: column-reverse;
@@ -2628,14 +2619,14 @@ footer a:hover {
   .section-page__articles {
     gap: 20px;
   }
-  .section-page__articles li {
-    width: 100%;
+  .section-page__article {
+    padding: 25px 20px;
   }
 }
 
 /***** Article page *****/
 .article-page {
-  padding: 80px 0;
+  padding: 40px 0 80px;
 }
 
 .article-page>.container {
@@ -3124,9 +3115,6 @@ footer a:hover {
   .article-page>.container {
     gap: 30px;
   }
-  .article-page h1, .post-title h1 {
-    font-size: 50px;
-  }
   .article-container {
     width: 65%;
   }
@@ -3134,10 +3122,10 @@ footer a:hover {
 
 @media (max-width: 767px) {
   .article-page {
-    padding: 60px 0;
+    padding-bottom: 60px;
   }
   .article-page h1, .post-title h1 {
-    font-size: 46px;
+    font-size: 40px;
   }
   .article-page>.container {
     flex-direction: column-reverse;
@@ -3725,7 +3713,7 @@ footer a:hover {
 
 /* Community topics grid */
 .community-page, .post-list-page {
-  padding: 80px 0;
+  padding: 40px 0 80px;
 }
 
 .topics {
@@ -3785,7 +3773,7 @@ footer a:hover {
     padding-bottom: 60px;
   }
   .community-page, .post-list-page {
-    padding: 60px 0;
+    padding-bottom: 60px;
   }
 }
 
@@ -3914,7 +3902,7 @@ footer a:hover {
 
 @media (max-width: 1023px) {
   .posts-item {
-    padding: 20px;
+    width: 100%;
   }
   .topic-page {
     padding-bottom: 320px;
@@ -3935,11 +3923,6 @@ footer a:hover {
     margin-top: 20px;
     gap: 20px;
     justify-content: center;
-  }
-  .posts-item {
-    max-width: 470px;
-    width: 100%;
-    padding: 30px;
   }
 }
 
@@ -5742,7 +5725,7 @@ footer a:hover {
 
 /***** Search results *****/
 .search-results-page {
-  padding: 80px 0;
+  padding: 40px 0 80px;
 }
 .search-results-page .container {
   display: flex;
@@ -5956,7 +5939,7 @@ footer a:hover {
 }
 @media (max-width: 767px) {
   .search-results-page {
-    padding: 60px 0;
+    padding-bottom: 60px;
   }
   .search-results-sidebar {
     max-width: none;
