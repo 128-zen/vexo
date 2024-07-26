@@ -1,7 +1,7 @@
 {
   "name": "Vexo 128",
   "author": "128zen",
-  "version": "1.0.111",
+  "version": "1.0.112",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -398,175 +398,15 @@
       ]
     },
     {
-      "label": "Homepage Introduction Section",
-      "variables": [
-        {
-          "identifier": "introduction_img1",
-          "type": "file",
-          "description": "Insert image",
-          "label": "Item 1 Image"
-        },
-        {
-          "identifier": "introduction_link1",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Item 1 Link",
-          "value": "#"
-        },
-        {
-          "identifier": "introduction_heading1",
-          "type": "text",
-          "description": "Enter heading",
-          "label": "Item 1 Heading",
-          "value": "Getting started"
-        },
-        {
-          "identifier": "introduction_subtitle1",
-          "type": "text",
-          "description": "Enter subtitle",
-          "label": "Item 1 Subtitle",
-          "value": "Discover everything you need to know to start your journey"
-        },
-        {
-          "identifier": "introduction_img2",
-          "type": "file",
-          "description": "Insert image",
-          "label": "Item 2 Image"
-        },
-        {
-          "identifier": "introduction_link2",
-          "type": "text",
-          "description": "Insert phone number",
-          "label": "Item 2 Phone Number",
-          "value": "#"
-        },
-        {
-          "identifier": "introduction_heading2",
-          "type": "text",
-          "description": "Enter heading",
-          "label": "Item 2 Heading",
-          "value": "Community"
-        },
-        {
-          "identifier": "introduction_subtitle2",
-          "type": "text",
-          "description": "Enter subtitle",
-          "label": "Item 2 Subtitle",
-          "value": "Discover everything you need to know to start your journey"
-        },
-        {
-          "identifier": "introduction_img3",
-          "type": "file",
-          "description": "Insert image",
-          "label": "Item 3 Image"
-        },
-        {
-          "identifier": "introduction_link3",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Item 3 Link",
-          "value": "#"
-        },
-        {
-          "identifier": "introduction_heading3",
-          "type": "text",
-          "description": "Enter heading",
-          "label": "Item 3 Heading",
-          "value": "Submit a request"
-        },
-        {
-          "identifier": "introduction_subtitle3",
-          "type": "text",
-          "description": "Enter subtitle",
-          "label": "Item 3 Subtitle",
-          "value": "Discover everything you need to know to start your journey"
-        },
-        {
-          "identifier": "introduction_img4",
-          "type": "file",
-          "description": "Insert image",
-          "label": "Item 4 Image"
-        },
-        {
-          "identifier": "introduction_link4",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Item 4 Link",
-          "value": "#"
-        },
-        {
-          "identifier": "introduction_heading4",
-          "type": "text",
-          "description": "Enter heading",
-          "label": "Item 4 Heading",
-          "value": "Submit a request"
-        },
-        {
-          "identifier": "introduction_subtitle4",
-          "type": "text",
-          "description": "Enter subtitle",
-          "label": "Item 4 Subtitle",
-          "value": "Discover everything you need to know to start your journey"
-        },
-        {
-          "identifier": "introduction_img5",
-          "type": "file",
-          "description": "Insert image",
-          "label": "Item 5 Image"
-        },
-        {
-          "identifier": "introduction_link5",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Item 5 Link",
-          "value": "#"
-        },
-        {
-          "identifier": "introduction_heading5",
-          "type": "text",
-          "description": "Enter heading",
-          "label": "Item 5 Heading",
-          "value": "Submit a request"
-        },
-        {
-          "identifier": "introduction_subtitle5",
-          "type": "text",
-          "description": "Enter subtitle",
-          "label": "Item 3 Subtitle",
-          "value": "Discover everything you need to know to start your journey"
-        },
-        {
-          "identifier": "introduction_img6",
-          "type": "file",
-          "description": "Insert image",
-          "label": "Item 6 Image"
-        },
-        {
-          "identifier": "introduction_link6",
-          "type": "text",
-          "description": "Insert link",
-          "label": "Item 6 Link",
-          "value": "#"
-        },
-        {
-          "identifier": "introduction_heading6",
-          "type": "text",
-          "description": "Enter heading",
-          "label": "Item 6 Heading",
-          "value": "Submit a request"
-        },
-        {
-          "identifier": "introduction_subtitle6",
-          "type": "text",
-          "description": "Enter subtitle",
-          "label": "Item 6 Subtitle",
-          "value": "Discover everything you need to know to start your journey"
-        }
-      ]
-    },
-    {
       "label": "Homepage FAQ Section",
       "variables": [
+        {
+          "identifier": "show_faq_section",
+          "type": "checkbox",
+          "description": "Show section",
+          "label": "Toggle Section",
+          "value": true
+        },
         {
           "identifier": "faq_heading",
           "type": "text",
@@ -635,6 +475,13 @@
     {
       "label": "Homepage Contact us Section",
       "variables": [
+        {
+          "identifier": "show_contact_us_section",
+          "type": "checkbox",
+          "description": "Show section",
+          "label": "Toggle Section",
+          "value": true
+        },
         {
           "identifier": "contact_us_heading",
           "type": "text",

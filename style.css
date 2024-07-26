@@ -713,9 +713,10 @@ ul {
 }
 
 .logo img {
-  max-height: 24px;
   vertical-align: middle;
-  width: auto;
+  width: 100%;
+  height: auto;
+  max-width: 160px;
 }
 .logo span {
   margin: 0 10px;
@@ -1100,6 +1101,10 @@ footer a:hover {
     flex-direction: column;
     gap: 10px;
   }
+  .footer__right {
+    text-align: center;
+    max-width: 80%;
+  }
 }
 
 .powered-by-zendesk {
@@ -1439,6 +1444,9 @@ footer a:hover {
 }
 
 @media (max-width: 767px) {
+  .hero-inner {
+    margin-top: 30px;
+  }
   .page-header h1, .page-header h2 {
     margin-bottom: 20px;
   }
@@ -1588,7 +1596,7 @@ footer a:hover {
 
 /* Home page */
 .homepage {
-  padding: 80px 0;
+  padding: 40px 0 80px;
 }
 
 .homepage > .container, .category-page > .container, .community-page > .container, .post-list-page > .container {
@@ -1619,7 +1627,7 @@ footer a:hover {
 
 .nav__categories p, .nav__topics p {
   font-size: 18px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .nav__categories p:last-child, .nav__topics p:last-child {
@@ -1641,7 +1649,7 @@ footer a:hover {
 }
 @media (max-width: 767px) {
   .homepage {
-    padding: 60px 0;
+    padding-bottom: 60px;
   }
   .homepage > .container, .category-page > .container, .community-page > .container, .post-list-page > .container {
     flex-direction: column;
@@ -1660,7 +1668,7 @@ footer a:hover {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 60px;
   position: relative;
   z-index: 1;
   background-color: $background_primary_color;
@@ -1674,7 +1682,7 @@ footer a:hover {
 }
 
 .categories__sections {
-  margin-top: 60px;
+  margin-top: 40px;
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
@@ -1738,19 +1746,16 @@ footer a:hover {
 }
 
 @media (max-width: 1023px) {
-  .categories {
-    gap: 60px;
-  }
   .categories__head {
     flex-direction: column;
     gap: 20px;
+    align-items: flex-start;
   }
   .categories__sections {
-    margin-top: 40px;
     justify-content: center;
   }
   .categories__section {
-    max-width: 370px;
+    width: 100%;
   }
 }
 @media (max-width: 767px) {
@@ -1759,7 +1764,6 @@ footer a:hover {
   }
   .categories__section {
     padding: 20px;
-    width: 100%;
   }
   .categories__item ul {
     margin: 20px 0 30px;
@@ -1866,7 +1870,7 @@ footer a:hover {
 }
 @media (max-width: 767px) {
   .faq {
-    padding: 30px;
+    padding: 30px 20px;
   }
   .faq__items {
     gap: 20px;
@@ -2252,7 +2256,7 @@ footer a:hover {
 .category-page__sections {
   display: flex;
   flex-direction: column;
-  gap: 80px;
+  gap: 60px;
   justify-content: center;
   margin-top: 60px;
 }
@@ -2262,7 +2266,7 @@ footer a:hover {
   align-items: start;
   justify-content: space-between;
   gap: 30px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .category-page__section-heading a {
@@ -2373,10 +2377,8 @@ footer a:hover {
   .category-page__section-heading {
     flex-direction: column;
     gap: 10px;
-    margin-bottom: 40px;
   }
   .category-page__sections {
-    gap: 60px;
     margin-top: 40px;
   }
   .category-page__articles {
