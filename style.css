@@ -1364,11 +1364,13 @@ footer a:hover {
 .page-header {
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
   flex-wrap: wrap;
   justify-content: space-between;
   text-align: left;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .page-header {
     align-items: center;
     flex-direction: row;
@@ -3690,7 +3692,7 @@ footer a:hover {
 
 @media (max-width: 1023px) {
   .featured-posts-item {
-    padding: 20px;
+    width: 100%;
   }
 }
 
@@ -3702,9 +3704,7 @@ footer a:hover {
     justify-content: center;
   }
   .featured-posts-item {
-    max-width: 470px;
-    width: 100%;
-    padding: 30px;
+    padding: 20px;
   }
   .community-header {
     margin-bottom: 20px;
