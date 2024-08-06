@@ -1680,6 +1680,14 @@ footer a:hover {
   gap: 30px;
 }
 
+.categories__head h2 {
+  text-align: left;
+}
+
+.categories__head div {
+  flex: 0 0 auto;
+}
+
 .categories__sections {
   margin-top: 40px;
   display: flex;
