@@ -363,7 +363,7 @@ textarea {
   outline: none;
   padding: 18px;
   height: 140px;
-  background-color: $containers_background_color;
+  background-color: $background_quaternary_color;
   border: 1px solid rgba(64, 73, 107, 0.12);
 }
 
@@ -1176,7 +1176,7 @@ footer a:hover {
   appearance: none;
   -webkit-appearance: none;
   box-sizing: border-box;
-  background-color: $containers_background_color;
+  background-color: $background_quaternary_color;
   color: $body_primary;
   flex: 1 1 auto;
   font-size: 16px;
@@ -1295,7 +1295,7 @@ footer a:hover {
   border-radius: 8px;
   padding: 15px 150px 15px 50px;
   outline: none;
-  background-color: $containers_background_color;
+  background-color: $background_quaternary_color;
   color: $body_primary;
   border: 1px solid rgba(64, 73, 107, 0.12);
 }
@@ -1801,7 +1801,7 @@ footer a:hover {
   border-radius: 8px;
   text-align: left;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 22px 0px rgba(0, 0, 0, 0.04);
-  background-color: $containers_background_color;
+  background-color: $background_quaternary_color;
 }
 
 .faq__item div {
@@ -2125,7 +2125,7 @@ footer a:hover {
   width: calc(50% - 15px);
   border-radius: 8px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 22px 0px rgba(0, 0, 0, 0.04);
-  background-color: $containers_background_color;
+  background-color: $background_quaternary_color;
   color: $headings_primary;
 }
 
@@ -2359,7 +2359,7 @@ footer a:hover {
 }
 
 .category-page__article > div:last-of-type path {
-  stroke: $containers_background_color;
+  stroke: $background_quaternary_color;
 }
 
 .section-page__article > div:last-of-type path, .featured-posts-btn path {
@@ -3084,7 +3084,7 @@ footer a:hover {
 
 .sidenav-title {
   padding: 8px 10px;
-  background-color: $containers_background_color;
+  background-color: $background_quaternary_color;
   border-radius: 8px;
   color: $headings_primary;
 }
@@ -3806,7 +3806,7 @@ footer a:hover {
   border-radius: 8px;
   transition: all .3s ease;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 22px 0px rgba(0, 0, 0, 0.04);
-  background-color: $containers_background_color;
+  background-color: $background_quaternary_color;
 }
 
 
@@ -3865,7 +3865,7 @@ footer a:hover {
   padding: 30px;
   width: calc(50% - 15px);
   border-radius: 8px;
-  background-color: $containers_background_color;
+  background-color: $background_quaternary_color;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.05), 0px 4px 22px 0px rgba(0, 0, 0, 0.04);
 } 
 

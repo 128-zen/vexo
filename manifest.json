@@ -1,7 +1,7 @@
 {
   "name": "Vexo 128",
   "author": "128zen",
-  "version": "1.0.117",
+  "version": "1.0.118",
   "api_version": 3,
   "default_locale": "en-us",
   "settings": [
@@ -32,29 +32,29 @@
         {
           "identifier": "background_secondary_color",
           "type": "color",
-          "description": "Choose background color",
+          "description": "Choose secondary background color",
           "label": "Background Secondary Color",
           "value": "#FFFAE7"
         },
         {
           "identifier": "background_tertiary_color",
           "type": "color",
-          "description": "Choose background color for sidebar and secondary button on hover",
+          "description": "Choose tertiary background color",
           "label": "Background Tertiary Color",
           "value": "#F0F9F5"
         },
         {
-          "identifier": "containers_background_color",
+          "identifier": "background_quaternary_color",
           "type": "color",
-          "description": "Choose background color for containers",
-          "label": "Containers Background Color",
+          "description": "Choose quaternary background color",
+          "label": "Background Quaternary Color",
           "value": "#fff"
         },
         {
           "identifier": "headings_primary",
           "type": "color",
-          "description": "Choose heading primary color",
-          "label": "Heading Primary Color",
+          "description": "Choose text color",
+          "label": "Text Color",
           "value": "#002E23"
         },
         {
@@ -67,8 +67,8 @@
         {
           "identifier": "hover_link_color",
           "type": "color",
-          "description": "Choose the primary color for the hover state of the links",
-          "label": "Hover Link Primary Color",
+          "description": "Choose color for the hover state of the links",
+          "label": "Hover Link Color",
           "value": "#007E60"
         }
       ]
@@ -279,27 +279,6 @@
           "description": "scoped_community_search_description",
           "label": "scoped_community_search_label",
           "value": true
-        },
-        {
-          "identifier": "show_popular_keywords",
-          "type": "checkbox",
-          "description": "Show popular keywords",
-          "label": "Toggle Popular Keywords",
-          "value": true
-        },
-        {
-          "identifier": "popular_keywords_description",
-          "type": "text",
-          "description": "Enter popular keywords description",
-          "label": "Popular Keywords Description",
-          "value": "Common searches:"
-        },
-        {
-          "identifier": "popular_keywords",
-          "type": "text",
-          "description": "Enter popular keywords (separated by commas)",
-          "label": "Popular Keywords",
-          "value": ""
         }
       ]
     },
@@ -661,7 +640,7 @@
           "identifier": "footer_background_color",
           "type": "color",
           "description": "Choose background color for Footer",
-          "label": "Background Tertiary Color",
+          "label": "Background Color",
           "value": "#002E23"
         },
         {
