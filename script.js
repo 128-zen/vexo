@@ -106,117 +106,119 @@
       .then(data => data.posts);
   }
   
-  Promise.all([fetchCategories(), fetchSections(), fetchTopics(), fetchPosts()])
-    .then(([categories, sections, topics, posts]) => {
-      categoriesAndSections = categories.map(category => ({
-        category: category,
-        sections: sections.filter(section => section.category_id === category.id)
-      }));
+  if(url.includes('community') || url.includes('sections') || url.includes('articles')) {
+    Promise.all([fetchCategories(), fetchSections(), fetchTopics(), fetchPosts()])
+      .then(([categories, sections, topics, posts]) => {
+        categoriesAndSections = categories.map(category => ({
+          category: category,
+          sections: sections.filter(section => section.category_id === category.id)
+        }));
 
-      topicsAndPosts = topics.map(topic => ({
-        topic: topic,
-        posts: posts.filter(post => post.topic_id === topic.id)
-      }));
+        topicsAndPosts = topics.map(topic => ({
+          topic: topic,
+          posts: posts.filter(post => post.topic_id === topic.id)
+        }));
 
-      if(postsList) {
-        let topicName = document.querySelector('.nav__topic h6')
-        topicsAndPosts.forEach(topicAndPosts => {
-          if(topicName.innerText == topicAndPosts.topic.name) {
-            topicAndPosts.posts.forEach(post => {
-              const postElement = document.createElement('p');
-              const postLink = document.createElement('a');
-              postLink.textContent = post.title;
-              postLink.setAttribute('href', post.html_url);
-              postElement.appendChild(postLink);
-              const topicId = getPostIdFromUrl(window.location.href); 
-              if(post.id == topicId){
-                postLink.classList.add('active');
+        if(postsList) {
+          let topicName = document.querySelector('.nav__topic h6')
+          topicsAndPosts.forEach(topicAndPosts => {
+            if(topicName.innerText == topicAndPosts.topic.name) {
+              topicAndPosts.posts.forEach(post => {
+                const postElement = document.createElement('p');
+                const postLink = document.createElement('a');
+                postLink.textContent = post.title;
+                postLink.setAttribute('href', post.html_url);
+                postElement.appendChild(postLink);
+                const topicId = getPostIdFromUrl(window.location.href); 
+                if(post.id == topicId){
+                  postLink.classList.add('active');
+                }
+                postsList.appendChild(postElement)
+              })
+            }
+          })
+        }
+
+        if(topicsList) {
+          topics.forEach(topic => {
+            const topicElement = document.createElement('p');
+            const topicLink = document.createElement('a');
+            topicLink.textContent = topic.name;
+            topicLink.setAttribute('href', topic.html_url);
+            topicElement.appendChild(topicLink);
+            const topicId = getTopicIdFromUrl(window.location.href); 
+            if(topic.id == topicId){
+              topicLink.classList.add('active');
+            }
+            topicsList.appendChild(topicElement)
+          })
+        }
+
+        if(categoriesList) {
+          categories.forEach(category => {
+            const categoryElement = document.createElement('p');
+            const categoryLink = document.createElement('a');
+            categoryLink.textContent = category.name;
+            categoryLink.setAttribute('href', category.html_url);
+            categoryElement.appendChild(categoryLink);
+            const categoryId = getCategoryIdFromUrl(window.location.href); 
+            if(category.id == categoryId){
+              categoryLink.classList.add('active');
+            }
+            categoriesList.appendChild(categoryElement)
+          })
+        }
+
+        if(contentContainer){
+          categoriesAndSections.forEach(categoryAndSections => {
+            const categoryBlock = document.createElement('div');
+            categoryBlock.classList.add('nav__category');
+            const categoryElement = document.createElement('div');
+            categoryElement.classList.add('nav__heading');
+            const categoryHeading = document.createElement('p');
+            const sectionsBlock = document.createElement('div');
+            sectionsBlock.classList.add('nav__sections');
+            categoryHeading.textContent = categoryAndSections.category.name;
+            categoryElement.appendChild(categoryHeading)
+            categoryBlock.appendChild(categoryElement);
+            contentContainer.appendChild(categoryBlock);
+      
+            categoryAndSections.sections.forEach(section => {
+              const sectionElement = document.createElement('a');
+              sectionElement.textContent = section.name;
+              sectionElement.setAttribute('href', section.html_url)
+              sectionsBlock.appendChild(sectionElement);
+              categoryBlock.appendChild(sectionsBlock);
+              const sectionId = getSectionIdFromUrl(window.location.href) 
+              const sectionArticle = document.querySelector('.section-id');
+              let sectionIdArticle = ''
+              if(sectionArticle){
+                sectionIdArticle = sectionArticle.innerText
               }
-              postsList.appendChild(postElement)
-            })
-          }
-        })
-      }
-
-      if(topicsList) {
-        topics.forEach(topic => {
-          const topicElement = document.createElement('p');
-          const topicLink = document.createElement('a');
-          topicLink.textContent = topic.name;
-          topicLink.setAttribute('href', topic.html_url);
-          topicElement.appendChild(topicLink);
-          const topicId = getTopicIdFromUrl(window.location.href); 
-          if(topic.id == topicId){
-            topicLink.classList.add('active');
-          }
-          topicsList.appendChild(topicElement)
-        })
-      }
-
-      if(categoriesList) {
-        categories.forEach(category => {
-          const categoryElement = document.createElement('p');
-          const categoryLink = document.createElement('a');
-          categoryLink.textContent = category.name;
-          categoryLink.setAttribute('href', category.html_url);
-          categoryElement.appendChild(categoryLink);
-          const categoryId = getCategoryIdFromUrl(window.location.href); 
-          if(category.id == categoryId){
-            categoryLink.classList.add('active');
-          }
-          categoriesList.appendChild(categoryElement)
-        })
-      }
-
-      if(contentContainer){
-        categoriesAndSections.forEach(categoryAndSections => {
-          const categoryBlock = document.createElement('div');
-          categoryBlock.classList.add('nav__category');
-          const categoryElement = document.createElement('div');
-          categoryElement.classList.add('nav__heading');
-          const categoryHeading = document.createElement('p');
-          const sectionsBlock = document.createElement('div');
-          sectionsBlock.classList.add('nav__sections');
-          categoryHeading.textContent = categoryAndSections.category.name;
-          categoryElement.appendChild(categoryHeading)
-          categoryBlock.appendChild(categoryElement);
-          contentContainer.appendChild(categoryBlock);
-    
-          categoryAndSections.sections.forEach(section => {
-            const sectionElement = document.createElement('a');
-            sectionElement.textContent = section.name;
-            sectionElement.setAttribute('href', section.html_url)
-            sectionsBlock.appendChild(sectionElement);
-            categoryBlock.appendChild(sectionsBlock);
-            const sectionId = getSectionIdFromUrl(window.location.href) 
-            const sectionArticle = document.querySelector('.section-id');
-            let sectionIdArticle = ''
-            if(sectionArticle){
-              sectionIdArticle = sectionArticle.innerText
-            }
-            if(section.id == sectionId || section.id == sectionIdArticle){
-              categoryElement.classList.add('active');
-              sectionsBlock.classList.add('open');
-              sectionElement.classList.add('active')
-            }
+              if(section.id == sectionId || section.id == sectionIdArticle){
+                categoryElement.classList.add('active');
+                sectionsBlock.classList.add('open');
+                sectionElement.classList.add('active')
+              }
+            });
+            contentContainer.appendChild(categoryBlock);
           });
-          contentContainer.appendChild(categoryBlock);
-        });
-        //implementing sidebar navigation toggle on the Section and Article Pages
-        const navItems = document.querySelectorAll('.nav__category');
-        navItems.forEach((item) => {
-          const heading = item.querySelector('.nav__heading');
-          const content = item.querySelector('.nav__sections');
-          if(heading && content){
-            heading.addEventListener('click', function() {
-              this.classList.toggle('active');
-              content.classList.toggle('open');
-            })
-          }
-        })
-      }
-    })
-    .catch(error => console.error('Error fetching data:', error));
+          //implementing sidebar navigation toggle on the Section and Article Pages
+          const navItems = document.querySelectorAll('.nav__category');
+          navItems.forEach((item) => {
+            const heading = item.querySelector('.nav__heading');
+            const content = item.querySelector('.nav__sections');
+            if(heading && content){
+              heading.addEventListener('click', function() {
+                this.classList.toggle('active');
+                content.classList.toggle('open');
+              })
+            }
+          })
+        }
+      })
+      .catch(error => console.error('Error fetching data:', error));
+  }
 
   //changing Like and Dislike images on the Article Page
   const buttonUp = document.querySelector('.article-vote-up');
