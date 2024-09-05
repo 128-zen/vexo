@@ -155,7 +155,9 @@
         }
 
         if(categoriesList) {
+          console.log('test');
           categories.forEach(category => {
+            console.log(category);
             const categoryElement = document.createElement('p');
             const categoryLink = document.createElement('a');
             categoryLink.textContent = category.name;
