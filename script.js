@@ -106,7 +106,7 @@
       .then(data => data.posts);
   }
   
-  if(url.includes('community') || url.includes('catedories') || url.includes('sections') || url.includes('articles')) {
+  if(url.includes('community') || url.includes('categories') || url.includes('sections') || url.includes('articles')) {
     Promise.all([fetchCategories(), fetchSections(), fetchTopics(), fetchPosts()])
       .then(([categories, sections, topics, posts]) => {
         categoriesAndSections = categories.map(category => ({
