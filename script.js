@@ -106,7 +106,7 @@
       .then(data => data.posts);
   }
   
-  if(url.includes('community') || url.includes('sections') || url.includes('articles')) {
+  if(url.includes('community') || url.includes('catedories') || url.includes('sections') || url.includes('articles')) {
     Promise.all([fetchCategories(), fetchSections(), fetchTopics(), fetchPosts()])
       .then(([categories, sections, topics, posts]) => {
         categoriesAndSections = categories.map(category => ({
@@ -155,9 +155,7 @@
         }
 
         if(categoriesList) {
-          console.log('test');
           categories.forEach(category => {
-            console.log(category);
             const categoryElement = document.createElement('p');
             const categoryLink = document.createElement('a');
             categoryLink.textContent = category.name;
